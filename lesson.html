@@ -1,24 +1,31 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" class="scheme-light dark:scheme-dark">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Lesson</title>
     <link rel="stylesheet" href="/app/app.css" />
+    <script>
+      try {
+        const t = localStorage.getItem("theme");
+        document.documentElement.classList.toggle("dark", t ? t === "dark" : matchMedia("(prefers-color-scheme: dark)").matches);
+      } catch {}
+    </script>
   </head>
-  <body class="h-screen overflow-hidden bg-stone-50 text-stone-800 antialiased">
+  <body class="h-screen overflow-hidden bg-stone-50 text-stone-800 antialiased dark:bg-stone-900 dark:text-stone-300">
     <div class="flex h-full flex-col lg:flex-row">
       <!-- Lesson text -->
       <section id="lesson-pane" class="flex min-h-0 shrink-0 flex-col lg:w-(--split,46%)">
-        <nav class="flex items-center gap-2 border-b border-stone-200 bg-white px-5 py-2 text-sm">
-          <a href="/" class="font-medium text-stone-500 hover:text-stone-900">← All lessons</a>
+        <nav class="flex items-center gap-2 border-b border-stone-200 bg-white px-5 py-2 text-sm dark:border-stone-800 dark:bg-stone-900">
+          <a href="/" class="font-medium text-stone-500 hover:text-stone-900 dark:text-stone-400 dark:hover:text-stone-200">← All lessons</a>
           <span class="flex-1"></span>
-          <a id="prev" class="rounded px-2 py-1 text-stone-500 hover:bg-stone-100">‹ Prev</a>
-          <a id="next" class="rounded px-2 py-1 text-stone-500 hover:bg-stone-100">Next ›</a>
+          <a id="prev" class="rounded px-2 py-1 text-stone-500 hover:bg-stone-100 dark:text-stone-400 dark:hover:bg-stone-800">‹ Prev</a>
+          <a id="next" class="rounded px-2 py-1 text-stone-500 hover:bg-stone-100 dark:text-stone-400 dark:hover:bg-stone-800">Next ›</a>
+          <button id="theme" class="rounded px-2 py-1 text-stone-500 hover:bg-stone-100 dark:text-stone-400 dark:hover:bg-stone-800"></button>
         </nav>
         <article
           id="lesson"
-          class="prose prose-stone max-w-none flex-1 overflow-y-auto px-8 py-8 prose-headings:scroll-mt-4 prose-code:before:content-none prose-code:after:content-none prose-code:rounded prose-code:bg-stone-200/70 prose-code:px-1 prose-code:font-normal prose-pre:bg-stone-900 [&_pre_code]:bg-transparent [&_pre_code]:p-0"
+          class="prose prose-stone max-w-none flex-1 overflow-y-auto px-8 py-8 prose-headings:scroll-mt-4 prose-code:before:content-none prose-code:after:content-none prose-code:rounded prose-code:bg-stone-200/70 dark:prose-invert dark:prose-code:bg-stone-800 prose-code:px-1 prose-code:font-normal prose-pre:bg-stone-900 dark:prose-pre:bg-stone-950/50 dark:prose-pre:ring-1 dark:prose-pre:ring-white/10 [&_pre_code]:bg-transparent [&_pre_code]:p-0 prose-blockquote:rounded-r-lg prose-blockquote:border-sky-400 prose-blockquote:bg-sky-50 prose-blockquote:py-1 prose-blockquote:font-normal prose-blockquote:not-italic dark:prose-blockquote:border-sky-500 dark:prose-blockquote:bg-sky-950/40 [&_blockquote_p]:before:content-none [&_blockquote_p]:after:content-none"
         ></article>
       </section>
 
@@ -29,23 +36,26 @@
         aria-orientation="vertical"
         aria-label="Resize lesson pane"
         tabindex="0"
-        class="relative z-10 hidden w-px shrink-0 cursor-col-resize bg-stone-200 outline-hidden before:absolute before:inset-y-0 before:-inset-x-1.5 hover:bg-stone-400 focus-visible:bg-stone-500 data-dragging:bg-stone-500 lg:block"
+        class="relative z-10 hidden w-px shrink-0 cursor-col-resize bg-stone-200 outline-hidden dark:bg-stone-800 dark:hover:bg-stone-600 dark:focus-visible:bg-stone-500 dark:data-dragging:bg-stone-500 before:absolute before:inset-y-0 before:-inset-x-1.5 hover:bg-stone-400 focus-visible:bg-stone-500 data-dragging:bg-stone-500 lg:block"
       ></div>
 
       <!-- Live exercise preview -->
       <section class="flex min-h-0 flex-1 flex-col">
-        <div id="tabs" class="flex items-center gap-1 overflow-x-auto border-b border-stone-200 bg-white px-3 py-2 text-sm"></div>
-        <div class="relative flex-1 bg-[repeating-conic-gradient(var(--color-stone-100)_0_25%,white_0_50%)] bg-size-[20px_20px]">
+        <div id="tabs" class="flex items-center gap-1 overflow-x-auto border-b border-stone-200 bg-white px-3 py-2 text-sm dark:border-stone-800 dark:bg-stone-900"></div>
+        <div class="relative flex-1 bg-[repeating-conic-gradient(var(--color-stone-100)_0_25%,white_0_50%)] dark:bg-[repeating-conic-gradient(var(--color-stone-900)_0_25%,var(--color-stone-950)_0_50%)] bg-size-[20px_20px]">
           <iframe id="preview" class="absolute inset-0 size-full bg-white"></iframe>
-          <p id="empty" class="absolute inset-0 hidden place-items-center text-stone-400">This lesson has no exercise files — follow the instructions on the left.</p>
+          <p id="empty" class="absolute inset-0 hidden place-items-center text-stone-400 dark:text-stone-500">This lesson has no exercise files — follow the instructions on the left.</p>
         </div>
-        <p id="path" class="border-t border-stone-200 bg-white px-4 py-1.5 font-mono text-xs text-stone-500"></p>
+        <p id="path" class="border-t border-stone-200 bg-white px-4 py-1.5 font-mono text-xs text-stone-500 dark:border-stone-800 dark:bg-stone-900 dark:text-stone-400"></p>
       </section>
     </div>
 
     <script type="module">
       import { marked } from "marked";
       import { lessons } from "/app/course.js";
+      import { themeToggle } from "/app/theme.js";
+
+      themeToggle(document.getElementById("theme"));
 
       const slug = new URLSearchParams(location.search).get("l") ?? lessons[0].slug;
       const i = lessons.findIndex((l) => l.slug === slug);
@@ -117,10 +127,13 @@
         document.getElementById("path").textContent = `edit: ${ex.path.slice(1)}`;
         for (const t of tabs.children) {
           const active = t.dataset.path === ex.path;
-          t.className = `shrink-0 rounded-md px-3 py-1 font-medium ${active ? "bg-stone-900 text-white" : "text-stone-600 hover:bg-stone-100"}`;
+          t.className = `shrink-0 rounded-md px-3 py-1 font-medium ${active ? "bg-stone-900 text-white dark:bg-stone-700 dark:text-stone-100" : "text-stone-600 hover:bg-stone-100 dark:text-stone-400 dark:hover:bg-stone-800"}`;
         }
         history.replaceState(null, "", `?l=${slug}&ex=${ex.id}`);
       }
+
+      // Lessons 00–09 are light-only designs: dim them a little in dark mode so they don't glare
+      if (Number(lesson.num) < 10) frame.classList.add("dark:brightness-80");
 
       if (lesson.exercises.length === 0) {
         frame.classList.add("hidden");
@@ -135,7 +148,7 @@
       }
       const open = document.createElement("a");
       open.textContent = "open in new tab ↗";
-      open.className = "ml-auto shrink-0 px-2 text-stone-400 hover:text-stone-700";
+      open.className = "ml-auto shrink-0 px-2 text-stone-400 hover:text-stone-700 dark:text-stone-500 dark:hover:text-stone-300";
       open.target = "_blank";
       tabs.append(open);
       frame.addEventListener("load", () => (open.href = frame.src));

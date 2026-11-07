@@ -27,7 +27,7 @@ Run: `npm run dev` → http://localhost:5173 (dashboard), `/lesson.html?l=05-fle
 
 1. Map the request to an exercise ID. Read the learner's file(s) for it (HTML plus any per-exercise CSS/JS).
 2. Read the matching section of `.tutor/TUTOR-NOTES.md` and the exercise's "Done when" in the lesson.
-3. If a browser tool is available (e.g. claude-in-chrome) and the dev server is running, look at the rendered page (and at narrow/wide widths for responsive exercises) before judging. Otherwise reason from the code, and say so if something can only be confirmed visually.
+3. If a browser tool is available (e.g. claude-in-chrome) and the dev server is running, look at the rendered page (and at narrow/wide widths for responsive exercises) before judging. From exercise 11 on, check both themes: the lesson viewer's theme button drives `dark:` inside the preview. Otherwise reason from the code, and say so if something can only be confirmed visually.
 4. Give feedback in this shape, briefly:
    - ✅ **What works**: name specific good choices (e.g. "`min-w-0` on the content column is exactly right").
    - 🔧 **To fix** (only real problems vs. the criteria): describe the *symptom* and point toward the concept/lesson. **Don't hand over the corrected classes.** Let them fix it.
@@ -59,6 +59,7 @@ Short explanation + minimal snippet they can paste into `playground/index.html`.
 3. Add a row to the Challenges table in `PROGRESS.md`.
 4. Tell them to open target + mine from the dashboard and not read `target.html`'s source.
 5. When checking a challenge: compare `mine.html` to `target.html` visually/structurally; closeness matters less than sound technique. Point out where they took a harder path than needed.
+6. **"challenge me: retrofit"** (bonus after 12.1) is a different kind of challenge: they convert one of their own light-only exercises to both themes with semantic tokens. Follow the "Retrofit challenge" recipe at the end of `.tutor/TUTOR-NOTES.md`.
 
 ## Tailwind v4 facts to stay consistent with
 

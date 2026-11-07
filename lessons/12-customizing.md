@@ -146,5 +146,12 @@ Files: `exercises/12-customizing/2-extras.html` and `exercises/12-customizing/ex
 2. Create a functional `@utility` `text-shadow-glow-*` **or** something of your own invention that takes a value.
 3. Create a `hocus` custom variant (hover OR focus-visible) and use it on the links.
 4. Add the typography plugin with `@plugin` and render the blog section with `prose` (plus `prose-lg` and a `prose-a:` modifier to color links).
+5. Make the page work in **both themes**. For the blog section, `dark:prose-invert` does most of the work.
 
-**Done when:** each piece works, and you can explain when you'd choose `@utility` vs a component in a template.
+**Done when:** each piece works, the page looks intentional in both themes, and you can explain when you'd choose `@utility` vs a component in a template.
+
+## Bonus · Retrofit an early exercise
+
+Once 12.1 is done, say **`challenge me: retrofit`**. Claude copies one of your finished light-only exercises (00–09) into `challenges/` with its own stylesheet. Your job is to make it work in both themes with **semantic colors** (`bg-surface`, `text-fg`, `text-muted`…), using as few `dark:` classes as possible.
+
+It shows why tokens scale: you define the palette once, instead of adding a `dark:` class to every element.

@@ -81,7 +81,7 @@ Files: `exercises/13-reuse/1-components.html` and `exercises/13-reuse/components
 2. `Badge({ text, tone })` with tones `success | warning | neutral`
 3. `ProductCard(product)` that uses `Badge` and `Button`, and renders all products into the grid with a **loop**
 
-**Done when:** every product card renders, out-of-stock products show a warning badge and a disabled secondary button, and no class name in your JS is built by string concatenation of parts.
+**Done when:** every product card renders, out-of-stock products show a warning badge and a disabled secondary button, no class name in your JS is built by string concatenation of parts, and the components look right in **both themes** (put the `dark:` classes inside the variant maps, so callers never have to think about them).
 
 ## Exercise 13.2 · Fix the broken classes
 
@@ -91,4 +91,4 @@ This exercise has its own stylesheet that only scans its own files. The script s
 
 Then handle the last requirement: the "custom" pill should take its color from user data (`#ff6b35`) using a CSS variable.
 
-**Done when:** all pills are colored and you can explain the root cause in one sentence.
+**Done when:** all pills are colored and readable in both themes, and you can explain the root cause in one sentence.

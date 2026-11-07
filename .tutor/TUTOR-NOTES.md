@@ -3,6 +3,8 @@
 > For Claude. **Spoilers** for the learner. This file says what to look for when the learner asks to check an exercise.
 > Each entry: **Must** (required for "done"), **Look for** (good signs / idiomatic choices worth praising), **Common mistakes** (probe for these), **Reference** (one idiomatic approach; never paste it unless the learner explicitly asks for the solution).
 > There are many valid solutions. Judge against the lesson's "Done when", not against the reference.
+>
+> **Themes:** 00–09 are light-only designs. Don't ask for dark styles there (praise it if they add some anyway). From **11 on, "looks intentional in both themes" is a Must** (10.x, 12.1 and 14.1 had it already). The lesson viewer's theme button drives `prefers-color-scheme` inside the preview iframe, so when checking in the browser, look at both themes. Starters from 11 on ship with an adaptive page bg + labels; everything the learner styles needs its dark side.
 
 ---
 
@@ -113,10 +115,12 @@
 
 ## 11.1 · Micro-interactions
 - **Must:** (1) `transition-colors hover:bg-indigo-500 active:scale-95` (if scale is used, needs `transition` not only `transition-colors`; point out); (2) `transition hover:-translate-y-1 hover:shadow-lg`; (3) `group` on `<a>`, arrow `transition-transform group-hover:translate-x-1`; (4) `transition-transform duration-500 hover:rotate-90` (or 180); (5) track `peer-checked:bg-indigo-600 transition-colors`, knob `transition-transform peer-checked:translate-x-5`; (6) `group` on details, chevron `transition-transform group-open:rotate-180`.
+- **Both themes (Must):** card + accordion `dark:bg-slate-900 dark:ring-white/10` (text readable), switch track `dark:bg-slate-700` unchecked, knob still visible, arrow link `dark:text-indigo-400`.
 - **Common mistakes:** `hover:transition` (transition inside hover: it animates in but snaps back out); `transition-colors` with a transform (no animation of transform); knob translating wrong distance (track w-12=3rem, knob size-5 + left-1 → translate-x-5 = 1.25rem; check visually). `open:` variant applies to the details element itself, so child needs `group-open:`.
 
 ## 11.2 · Loading states
 - **Must:** skeleton: `animate-pulse` on a wrapper with gray blocks (`rounded-full size-12 bg-slate-200`, `h-4 w-2/3 rounded bg-slate-200`, lines `h-3` with varying widths); spinner `size-4 animate-spin rounded-full border-2 border-white border-t-transparent`; ping: wrapper `absolute -top-1 -right-1 flex size-3` with `absolute inline-flex size-full animate-ping rounded-full bg-red-400 opacity-75` + `relative inline-flex size-3 rounded-full bg-red-500`; `motion.css` `@theme { --animate-wiggle: ...; @keyframes wiggle {...} }` used as `motion-safe:animate-wiggle` on the bell.
+- **Both themes (Must):** skeleton blocks `dark:bg-slate-700` on a `dark:bg-slate-900` card (light gray blocks vanish on dark); Inbox chip `dark:bg-slate-800 dark:text-slate-200 dark:ring-slate-700`; the spinner/ping colors usually work as-is.
 - **Common mistakes:** keyframes outside `@theme` (still works, but they're always emitted; inside `@theme` is the documented way and they're only emitted when the animation is used); bell `inline` element so `rotate` doesn't apply (it's `inline-block` already); forgetting `motion-safe:`.
 
 ## 12.1 · Brand theme
@@ -125,19 +129,31 @@
 
 ## 12.2 · Extras
 - **Must:** `@utility scrollbar-hidden { scrollbar-width: none; &::-webkit-scrollbar { display: none; } }`; a functional utility using `--value(...)`, e.g. `@utility text-glow-* { text-shadow: 0 0 --value(integer)px currentColor; }` or `--value(--color-*)` usage; `@custom-variant hocus (&:hover, &:focus-visible);` used as `hocus:bg-slate-100`; `@plugin "@tailwindcss/typography";` + `<article class="prose prose-lg prose-a:text-indigo-600">`.
+- **Both themes (Must):** chips `dark:bg-slate-800`, hocus links `dark:hocus:bg-slate-800` (stacking a custom variant after `dark:` is a nice moment to point out), article `dark:prose-invert` (+ link color adjusted, e.g. `dark:prose-a:text-indigo-400`).
 - **Note:** v4 has built-in `text-shadow-*` utilities since 4.1, so if they named theirs `text-shadow-*` it may clash. Suggest a distinct name.
 - **Discussion to have:** `@utility` = single-purpose, variant-able, belongs in CSS; component (template) = multi-element structure + many classes.
 
 ## 13.1 · Components
 - **Must:** `Button` with `base` string + `variants = { primary: "...", secondary: "...", danger: "..." }` + `sizes = { sm: "...", md: "..." }` + `disabled:` classes; `Badge` with `tones` map; `ProductCard` uses `Badge`/`Button`, gradient `bg-linear-to-br ${product.color}` (OK: full class names exist in data); `products.map(ProductCard).join("")`.
+- **Both themes (Must):** `dark:` classes live **inside** the variant/tone maps (e.g. secondary `dark:bg-white/10 dark:text-white dark:ring-white/10`, badge tones `dark:bg-emerald-400/10 dark:text-emerald-300`), card `dark:bg-slate-900`. Praise if they reach for semantic tokens instead. Gradient image areas may stay as-is.
 - **Common mistakes:** `bg-${color}-600` anywhere (the cardinal sin); passing extra classes that conflict with base (e.g. `w-full` fine, `px-2` conflicting with size padding is not); forgetting `disabled` attribute and only styling it.
 
 ## 13.2 · Dynamic classes
 - **Root cause (learner must articulate):** Tailwind scans source text; `bg-${color}-100` never appears as a complete class, so no CSS is generated.
 - **Must:** a map like `{ emerald: "bg-emerald-100 text-emerald-800 ring-emerald-600/20", ... }`; custom pill uses `style="--pill: #ff6b35"` + `bg-(--pill)/15 text-(--pill) ring-(--pill)/30` or similar (opacity modifiers on vars work in v4 via color-mix).
+- **Both themes (Must):** pill map has dark variants (`dark:bg-emerald-400/10 dark:text-emerald-300 dark:ring-emerald-400/20`…). The custom `--pill` version with `/15` bg + `/30` ring tends to work in both themes for free, worth pointing out.
 - **Common mistakes:** "fixing" with `@source inline(...)` or safelisting (explicitly disallowed); inline `style="background: ..."` with no Tailwind (acceptable fallback but steer toward the CSS-variable pattern).
 
 ## 14.1 · Capstone
 - Review **per section** if asked. Check against the lesson's checklist: responsive 360→1440 (mobile-first classes), dark mode toggle with class strategy, custom theme in `capstone.css`, hover + focus-visible on every interactive element, ≥3 transitions + `motion-reduce`, no conflicting utilities (`hidden`+`flex` etc.), no dynamic class names, consistent spacing/radius/weight sets.
 - Prefer feedback that names the lesson to revisit ("this is the min-w-0 thing from 05").
 - When all sections pass, mark done and suggest challenges.
+
+## Retrofit challenge (bonus after 12.1, "challenge me: retrofit")
+- **When:** the learner has finished 12.1 and asks for it (lesson 12 bonus section). Pick a finished light-only exercise from 00–09 with several surfaces (04.2, 05.2, 06.1, 07.2, 09.1 are good). Ask which one only if they hint at a preference.
+- **Create** `challenges/<NN>-retrofit-<slug>/`:
+  - `target.html`: an unchanged copy of their finished exercise, with its stylesheet link pointing to `/src/styles.css`. It's the "before" reference, and fine to read.
+  - `mine.html`: the same copy, linked to its own `./retrofit.css`.
+  - `retrofit.css`: `@import "tailwindcss" source(none); @source "./mine.html";`, plus TODO comments for `@theme inline` semantic colors and `:root` values, and their dark values inside `@media (prefers-color-scheme: dark)`. Use the OS strategy so the viewer's theme button drives it. No toggle needed.
+  - `BRIEF.md`: make it work in both themes with semantic colors (`surface`, `fg`, `muted`, maybe `border`). Accent colors may use `dark:`. Done when: both themes look intentional, and the number of `dark:` classes is small (single digits).
+- **Check:** count the `dark:` classes left; tokens named by role, not by color (`surface`, not `white`); muted text and borders handled; avatar/ring details like 10.1.

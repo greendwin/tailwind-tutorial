@@ -5,3 +5,19 @@
 @source "./";
 @source "../index.html";
 @source "../lesson.html";
+
+/* Dark mode follows the .dark class on <html> (set from app/theme.js / the inline <head> snippet) */
+@custom-variant dark (&:where(.dark, .dark *));
+
+/* Softer dark-mode lesson text: off-white instead of prose-invert's pure white */
+.dark .prose {
+  --tw-prose-invert-body: var(--color-stone-300);
+  --tw-prose-invert-headings: var(--color-stone-200);
+  --tw-prose-invert-bold: var(--color-stone-200);
+  --tw-prose-invert-links: var(--color-stone-200);
+  --tw-prose-invert-code: var(--color-stone-200);
+  --tw-prose-invert-pre-code: var(--color-stone-300);
+  --tw-prose-invert-quotes: var(--color-stone-300);
+  --tw-prose-invert-th-borders: var(--color-stone-700);
+  --tw-prose-invert-td-borders: var(--color-stone-800);
+}

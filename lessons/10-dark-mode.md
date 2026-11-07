@@ -7,8 +7,9 @@
 ```
 
 By default, `dark:` follows the **operating system setting** (`prefers-color-scheme: dark`). To test it:
+- in this course's lesson viewer: use the **theme button** in the top bar. The preview iframe follows the viewer's color scheme, so it flips `dark:` in your exercise too,
 - switch your OS to dark mode, or
-- in Chrome/Edge DevTools: `Ctrl+Shift+P` → "Emulate CSS prefers-color-scheme: dark"
+- in Chrome/Edge DevTools: `Ctrl+Shift+P` → "Emulate CSS prefers-color-scheme: dark" (handy when the exercise is open in its own tab)
 
 ## Choosing dark colors
 
@@ -64,11 +65,21 @@ Writing `bg-white dark:bg-slate-900` on every element gets repetitive. Bigger pr
 
 Then you just write `bg-surface`. You'll do this in lesson 12. For now, practice the explicit way. It teaches you which colors pair well.
 
+## From here on: both themes
+
+Lessons 00–09 were light-only designs on purpose, so you could focus on one concept at a time. From **lesson 11 on, every exercise must look intentional in both themes**. That's part of each "Done when".
+
+- The starter pages already adapt (page background, labels). The elements **you** style need their dark side too.
+- Until lesson 12, write it explicitly: `bg-white dark:bg-slate-900`.
+- From lesson 12 on, prefer **semantic colors** (`bg-surface`, `text-fg`) so most elements need no `dark:` classes at all.
+
+Your earlier light-only exercises are fine as they are. Lesson 12 has a bonus "retrofit" challenge for giving one of them a dark side.
+
 ## Exercise 10.1 · Dark-ify a card (OS setting)
 
 File: `exercises/10-dark-mode/1-profile.html`
 
-The profile card is finished for light mode. Add `dark:` classes so it looks **designed** in dark mode, not just inverted. This one uses the default (OS-based) strategy, so use DevTools emulation to test.
+The profile card is finished for light mode. Add `dark:` classes so it looks **designed** in dark mode, not just inverted. This one uses the default (OS-based) strategy, so flip the viewer's theme button (or use DevTools emulation) to test.
 
 **Done when:** both modes look intentional: readable text contrast, no harsh pure-white areas in dark mode, accent colors adjusted, borders visible but subtle.
 

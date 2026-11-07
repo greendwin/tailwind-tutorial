@@ -91,7 +91,7 @@ Add motion to each element as described in the file:
 5. a toggle switch: the knob slides when the hidden checkbox is checked (`peer-checked:translate-x-*`)
 6. an accordion `<details>` whose chevron rotates when open (`open:` / `group-open:`)
 
-**Done when:** every transition feels smooth (not instant, not sluggish, usually 150–300ms) and each uses the narrowest transition property that works.
+**Done when:** every transition feels smooth (not instant, not sluggish, usually 150–300ms), each uses the narrowest transition property that works, and all six items look intentional in **both themes** (the card, switch and accordion need their dark side).
 
 ## Exercise 11.2 · Loading states & a custom animation
 
@@ -103,4 +103,4 @@ Files: `exercises/11-motion/2-loading.html` and `exercises/11-motion/motion.css`
 4. In `motion.css`, define a custom `--animate-*` with your own `@keyframes` (e.g. a wiggle or shake) and use it on the 🔔 bell.
 5. Wrap the infinite animations in `motion-safe:`.
 
-**Done when:** all four are animated, and your custom animation class works.
+**Done when:** all four are animated, your custom animation class works, and everything reads well in **both themes** (a light-gray skeleton is invisible on a dark card).
