@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>08.1 · Product page</title>
+    <link rel="stylesheet" href="/src/styles.css" />
+  </head>
+  <!--
+    EXERCISE 08.1: Responsive product page (see lessons/08-responsive.md)
+    Mobile first! Base classes = phone. Add md:/lg: for bigger screens.
+    Tip: click "open in new tab" in the lesson viewer to test wide screens.
+  -->
+  <body class="bg-white text-slate-800">
+    <header class="flex items-center gap-6 border-b border-slate-200 px-4 py-3">
+      <a href="#" class="text-lg font-black">◆ Shop</a>
+      <nav class="gap-6 text-sm font-medium text-slate-600">
+        <a href="#">New</a>
+        <a href="#">Men</a>
+        <a href="#">Women</a>
+        <a href="#">Sale</a>
+      </nav>
+      <button class="ml-auto text-2xl">☰</button>
+    </header>
+
+    <main class="px-4 py-8">
+      <section>
+        <div class="aspect-square rounded-2xl bg-linear-to-br from-orange-200 to-rose-300"></div>
+
+        <div>
+          <p class="text-sm font-semibold text-rose-600">New arrival</p>
+          <h1 class="font-bold tracking-tight">Trailblazer Running Shoe</h1>
+          <p class="text-2xl font-semibold">$129</p>
+          <p class="text-slate-600">
+            Lightweight, breathable and built for long distances. Recycled mesh upper, responsive foam midsole, and a grippy outsole for
+            wet roads.
+          </p>
+          <button class="rounded-full bg-slate-900 px-8 py-3 font-semibold text-white">Add to cart</button>
+        </div>
+      </section>
+
+      <section>
+        <h2 class="text-xl font-bold">You may also like</h2>
+        <div class="grid gap-4">
+          <div class="aspect-[4/5] rounded-xl bg-sky-100"></div>
+          <div class="aspect-[4/5] rounded-xl bg-lime-100"></div>
+          <div class="aspect-[4/5] rounded-xl bg-violet-100"></div>
+          <div class="aspect-[4/5] rounded-xl bg-amber-100"></div>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>

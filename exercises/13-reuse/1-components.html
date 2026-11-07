@@ -1,0 +1,19 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>13.1 · Components</title>
+    <link rel="stylesheet" href="/src/styles.css" />
+  </head>
+  <!--
+    EXERCISE 13.1: Component functions (see lessons/13-reuse.md)
+    Work in components.js. This file only provides the grid container.
+  -->
+  <body class="bg-slate-50 p-10">
+    <h1 class="text-2xl font-bold text-slate-900">Shop</h1>
+    <div id="buttons" class="mt-6 flex flex-wrap items-center gap-3"></div>
+    <div id="grid" class="mt-8 grid max-w-5xl grid-cols-[repeat(auto-fill,minmax(14rem,1fr))] gap-6"></div>
+    <script type="module" src="./components.js"></script>
+  </body>
+</html>

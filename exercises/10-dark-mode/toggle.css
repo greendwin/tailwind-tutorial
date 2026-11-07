@@ -1,0 +1,5 @@
+/* Stylesheet for exercise 10.2 only. */
+@import "tailwindcss" source(none);
+@source "./2-toggle.html";
+
+/* TODO: make `dark:` react to a `.dark` class instead of the OS setting */

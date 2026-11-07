@@ -1,0 +1,13 @@
+/*
+  YOUR stylesheet — every exercise and the playground link to this file.
+
+  `source(none)` turns off automatic scanning, and the @source lines tell
+  Tailwind exactly where to look for class names. That way only classes YOU
+  write in exercises/, playground/ and challenges/ end up in the CSS (lesson texts and
+  tutor notes don't leak in).
+*/
+@import "tailwindcss" source(none);
+
+@source "../exercises";
+@source "../playground";
+@source "../challenges";

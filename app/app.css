@@ -1,0 +1,7 @@
+/* Styles for the course shell (dashboard + lesson viewer). Not your homework — leave it be. */
+@import "tailwindcss" source(none);
+@plugin "@tailwindcss/typography";
+
+@source "./";
+@source "../index.html";
+@source "../lesson.html";

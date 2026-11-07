@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>07.1 · Form</title>
+    <link rel="stylesheet" href="/src/styles.css" />
+  </head>
+  <!--
+    EXERCISE 07.1: Sign-up form (see lessons/07-states.md)
+    Focus, hover, active, disabled, user-invalid, peer, accent, file:
+  -->
+  <body class="bg-slate-50 p-10">
+    <form class="mx-auto max-w-md space-y-5 rounded-2xl bg-white p-8 shadow-sm ring-1 ring-slate-900/5" onsubmit="return false">
+      <h1 class="text-2xl font-bold text-slate-900">Create account</h1>
+
+      <div>
+        <label for="name" class="block text-sm font-medium text-slate-700">Full name</label>
+        <input id="name" type="text" placeholder="Jane Doe" class="mt-1 w-full px-3 py-2" />
+      </div>
+
+      <div>
+        <label for="email" class="block text-sm font-medium text-slate-700">Email</label>
+        <input id="email" type="email" required placeholder="jane@example.com" class="mt-1 w-full px-3 py-2" />
+        <p class="mt-1 text-sm text-red-600">Please enter a valid email address.</p>
+      </div>
+
+      <div>
+        <label for="avatar" class="block text-sm font-medium text-slate-700">Avatar</label>
+        <input id="avatar" type="file" class="mt-1 block w-full text-sm text-slate-500" />
+      </div>
+
+      <label class="flex items-center gap-2 text-sm text-slate-700">
+        <input type="checkbox" class="size-4" />
+        I agree to the terms
+      </label>
+
+      <button type="submit" class="w-full rounded-lg bg-indigo-600 px-4 py-2.5 font-semibold text-white">Create account</button>
+    </form>
+  </body>
+</html>

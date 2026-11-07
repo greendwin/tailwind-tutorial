@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>04.2 · Stat cards</title>
+    <link rel="stylesheet" href="/src/styles.css" />
+  </head>
+  <!--
+    EXERCISE 04.2: Stat cards (see lessons/04-colors-surfaces.md)
+    Layout classes (grid, flex, gaps) are given. You add colors, borders, radius, shadows, gradients.
+    Padding/sizing is up to you too.
+  -->
+  <body class="bg-slate-50 p-10">
+    <div class="grid max-w-4xl grid-cols-3 gap-6">
+      <div>
+        <div class="flex items-start justify-between">
+          <div>📈</div>
+          <span>+12%</span>
+        </div>
+        <p>$48,210</p>
+        <p>Revenue this month</p>
+      </div>
+
+      <div>
+        <div class="flex items-start justify-between">
+          <div>👥</div>
+          <span>−3%</span>
+        </div>
+        <p>1,284</p>
+        <p>Active users</p>
+      </div>
+
+      <!-- featured card: gradient + white text -->
+      <div>
+        <div class="flex items-start justify-between">
+          <div>⭐</div>
+          <span>+28%</span>
+        </div>
+        <p>94.2%</p>
+        <p>Customer satisfaction</p>
+      </div>
+    </div>
+  </body>
+</html>

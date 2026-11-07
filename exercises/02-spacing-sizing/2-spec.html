@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>02.2 · Build to spec</title>
+    <link rel="stylesheet" href="/src/styles.css" />
+  </head>
+  <!--
+    EXERCISE 02.2: Build to spec (see lessons/02-spacing-sizing.md)
+
+    DESIGNER SPEC
+    - Page:        48px padding all around
+    - Panel:       max width 448px, centered, 32px padding, 1px border slate-200, 12px radius
+    - Avatar:      56px x 56px square, fully round
+    - Name:        16px below the avatar
+    - Bio:         8px below the name, max width ~65 characters
+    - Stats row:   24px below the bio, 3 boxes side by side (use `flex`), 12px gap between boxes
+    - Stat box:    each 1/3 of the row width, 12px vertical / 8px horizontal padding
+    - Banner:      at the very top of the panel, exactly 132px tall, stretches full panel width
+                   (it should "bleed" over the panel's 32px padding: hint, negative margins)
+  -->
+  <body>
+    <div class="bg-white">
+      <div class="bg-linear-to-r from-sky-400 to-indigo-500"></div>
+      <div class="rounded-full bg-indigo-200"></div>
+      <h2 class="text-lg font-bold text-slate-900">Ada Lovelace</h2>
+      <p class="text-slate-600">
+        Mathematician and writer, chiefly known for her work on Charles Babbage's proposed mechanical general-purpose computer, the
+        Analytical Engine.
+      </p>
+      <div>
+        <div class="rounded-lg bg-slate-50 text-center"><b>128</b> posts</div>
+        <div class="rounded-lg bg-slate-50 text-center"><b>4.2k</b> followers</div>
+        <div class="rounded-lg bg-slate-50 text-center"><b>312</b> following</div>
+      </div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,5 @@
+/* Stylesheet for exercise 11.2 only. */
+@import "tailwindcss" source(none);
+@source "./2-loading.html";
+
+/* TODO: define a custom animation (an --animate-* variable + @keyframes) inside @theme */

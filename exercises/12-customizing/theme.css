@@ -1,0 +1,7 @@
+/* Stylesheet for exercise 12.1 only. Load a Google Font with @import url(...) ABOVE the tailwind import. */
+@import "tailwindcss" source(none);
+@source "./1-brand.html";
+
+/* TODO 1-3: @theme with brand colors, --font-display, --radius-card, --shadow-card */
+
+/* TODO 5: @custom-variant dark, @theme inline semantic colors, :root / .dark values */

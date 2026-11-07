@@ -1,0 +1,11 @@
+/* Stylesheet for exercise 12.2 only. */
+@import "tailwindcss" source(none);
+@source "./2-extras.html";
+
+/* TODO 1: @utility scrollbar-hidden */
+
+/* TODO 2: a functional @utility that takes a value (--value(...)) */
+
+/* TODO 3: @custom-variant hocus */
+
+/* TODO 4: @plugin "@tailwindcss/typography"; */

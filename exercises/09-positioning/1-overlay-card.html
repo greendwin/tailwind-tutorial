@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>09.1 · Overlay card</title>
+    <link rel="stylesheet" href="/src/styles.css" />
+  </head>
+  <!--
+    EXERCISE 09.1: Media card with overlays (see lessons/09-positioning.md)
+    Overlays: heart (top-right), badge (top-left), bottom gradient + price, avatar overlapping bottom edge.
+  -->
+  <body class="bg-slate-50 p-10">
+    <article class="w-80">
+      <div>
+        <img src="https://picsum.photos/id/1018/800/600" alt="Mountain cabin" />
+        <span class="rounded-full bg-white px-2 py-1 text-xs font-semibold text-slate-900">Superhost</span>
+        <button class="grid size-9 place-items-center rounded-full bg-white/90 text-rose-500">♥</button>
+        <div>
+          <p class="font-semibold text-white">$184 <span class="font-normal">/ night</span></p>
+        </div>
+        <div class="size-12 rounded-full bg-amber-300 ring-4 ring-white"></div>
+      </div>
+      <div class="pt-8">
+        <h3 class="font-semibold text-slate-900">Cabin with lake view</h3>
+        <p class="text-sm text-slate-500">Hallstatt, Austria · ★ 4.96</p>
+      </div>
+    </article>
+  </body>
+</html>

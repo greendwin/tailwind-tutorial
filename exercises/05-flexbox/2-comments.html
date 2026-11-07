@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>05.2 · Comments</title>
+    <link rel="stylesheet" href="/src/styles.css" />
+  </head>
+  <!--
+    EXERCISE 05.2: Comment thread (see lessons/05-flexbox.md)
+    Media-object layout. Avatars never shrink; long names truncate; replies are indented.
+    The avatars are colored divs with initials. Make them fixed-size circles with centered initials.
+  -->
+  <body class="bg-white p-6">
+    <ul class="max-w-xl">
+      <li>
+        <div class="bg-amber-200 font-semibold text-amber-900">GH</div>
+        <div>
+          <div>
+            <span class="font-semibold text-slate-900">Grace Hopper</span>
+            <span class="text-sm text-slate-500">2h ago</span>
+            <button class="text-slate-400">⋯</button>
+          </div>
+          <p class="text-slate-700">This explanation finally made flexbox click for me. The ml-auto trick is magic.</p>
+        </div>
+      </li>
+
+      <!-- reply: indent it under the comment above -->
+      <li>
+        <div class="bg-sky-200 font-semibold text-sky-900">AL</div>
+        <div>
+          <div>
+            <span class="font-semibold text-slate-900">Ada Lovelace</span>
+            <span class="text-sm text-slate-500">1h ago</span>
+            <button class="text-slate-400">⋯</button>
+          </div>
+          <p class="text-slate-700">Agreed! Wait until you get to grid.</p>
+        </div>
+      </li>
+
+      <li>
+        <div class="bg-emerald-200 font-semibold text-emerald-900">BW</div>
+        <div>
+          <div>
+            <span class="font-semibold text-slate-900">Bartholomew Wolfeschlegelsteinhausenbergerdorff the Third, Esquire</span>
+            <span class="text-sm text-slate-500">5m ago</span>
+            <button class="text-slate-400">⋯</button>
+          </div>
+          <p class="text-slate-700">My name is a stress test for your layout. 😄</p>
+        </div>
+      </li>
+    </ul>
+  </body>
+</html>

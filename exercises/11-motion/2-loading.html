@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>11.2 · Loading states</title>
+    <!-- note: this exercise uses its OWN stylesheet -->
+    <link rel="stylesheet" href="./motion.css" />
+  </head>
+  <!--
+    EXERCISE 11.2: Loading states & a custom animation (see lessons/11-motion.md)
+    1. skeleton card   2. spinner button   3. ping dot   4. custom animation on the bell   5. motion-safe:
+  -->
+  <body class="bg-slate-50 p-10 text-slate-800">
+    <div class="max-w-md space-y-10">
+      <section>
+        <p class="mb-2 text-xs font-semibold text-slate-500 uppercase">1 · Skeleton card</p>
+        <div class="rounded-xl bg-white p-5 shadow-sm">
+          <!-- build: round avatar placeholder + title bar + 3 text lines of different widths -->
+        </div>
+      </section>
+
+      <section>
+        <p class="mb-2 text-xs font-semibold text-slate-500 uppercase">2 · Spinner button</p>
+        <button disabled class="inline-flex items-center gap-2 rounded-lg bg-indigo-600 px-4 py-2 font-semibold text-white">
+          <span><!-- spinner --></span>
+          Saving…
+        </button>
+      </section>
+
+      <section>
+        <p class="mb-2 text-xs font-semibold text-slate-500 uppercase">3 · Ping dot</p>
+        <span class="relative inline-flex">
+          <span class="rounded-md bg-white px-3 py-1.5 text-sm ring-1 ring-slate-300">Inbox</span>
+          <!-- build: a small red dot at the top-right corner, with a ping behind it -->
+        </span>
+      </section>
+
+      <section>
+        <p class="mb-2 text-xs font-semibold text-slate-500 uppercase">4 · Custom animation</p>
+        <span class="inline-block text-4xl">🔔</span>
+      </section>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>03.1 · Article</title>
+    <link rel="stylesheet" href="/src/styles.css" />
+  </head>
+  <!--
+    EXERCISE 03.1: Blog article (see lessons/03-typography.md)
+    Style the typography by hand. No `prose` class!
+  -->
+  <body class="bg-white text-slate-700">
+    <article>
+      <p>Engineering</p>
+      <h1>Why we rewrote our design system in a weekend, and what we learned</h1>
+      <p>Grace Hopper · March 14, 2026 · 6 min read</p>
+
+      <p>
+        Every growing product eventually hits the same wall: dozens of slightly different buttons, five shades of "brand blue", and a
+        stylesheet nobody dares to delete from. We hit that wall last spring.
+      </p>
+      <p>
+        Instead of another round of cleanup tickets, we tried something radical: a strict set of design tokens and a utility-first
+        workflow. Here's how it went.
+      </p>
+
+      <h2>What changed</h2>
+      <p>The biggest wins came from constraints, not from new features:</p>
+      <ul>
+        <li>One spacing scale used everywhere</li>
+        <li>Three font weights instead of seven</li>
+        <li>Colors referenced by role, never by hex code</li>
+      </ul>
+
+      <blockquote>"The best design decision is the one you only have to make once."</blockquote>
+
+      <p>
+        If you want the full details, read our <a href="#">migration guide</a>. It includes the scripts we used to find every
+        hard-coded color.
+      </p>
+    </article>
+  </body>
+</html>

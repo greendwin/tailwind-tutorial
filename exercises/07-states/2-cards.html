@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>07.2 · Plan picker & cards</title>
+    <link rel="stylesheet" href="/src/styles.css" />
+  </head>
+  <!--
+    EXERCISE 07.2: Plan picker & cards (see lessons/07-states.md)
+    Part 1: has-checked / has-focus-visible on labels. No JavaScript.
+    Part 2: group + group-hover on article cards.
+  -->
+  <body class="bg-slate-50 p-10">
+    <h2 class="text-lg font-bold text-slate-900">1 · Choose a plan</h2>
+    <fieldset class="mt-4 grid max-w-3xl grid-cols-3 gap-4">
+      <label>
+        <input type="radio" name="plan" value="hobby" />
+        <span class="block font-semibold text-slate-900">Hobby</span>
+        <span class="block text-sm text-slate-500">$0 / month</span>
+      </label>
+      <label>
+        <input type="radio" name="plan" value="pro" checked />
+        <span class="block font-semibold text-slate-900">Pro</span>
+        <span class="block text-sm text-slate-500">$19 / month</span>
+      </label>
+      <label>
+        <input type="radio" name="plan" value="team" />
+        <span class="block font-semibold text-slate-900">Team</span>
+        <span class="block text-sm text-slate-500">$49 / month</span>
+      </label>
+    </fieldset>
+
+    <h2 class="mt-12 text-lg font-bold text-slate-900">2 · Articles</h2>
+    <div class="mt-4 grid max-w-3xl grid-cols-2 gap-6">
+      <a href="#" class="rounded-xl bg-white p-6 ring-1 ring-slate-900/5">
+        <p class="text-xs font-semibold text-sky-600 uppercase">Guide</p>
+        <h3 class="mt-2 text-lg font-semibold text-slate-900">Mastering group and peer variants</h3>
+        <p class="mt-2 text-sm text-slate-600">Style elements based on their parents and siblings, without any JavaScript.</p>
+        <span class="mt-4 inline-block text-sm font-semibold text-sky-600">Read more →</span>
+      </a>
+      <a href="#" class="rounded-xl bg-white p-6 ring-1 ring-slate-900/5">
+        <p class="text-xs font-semibold text-sky-600 uppercase">Deep dive</p>
+        <h3 class="mt-2 text-lg font-semibold text-slate-900">The has-* variant changes everything</h3>
+        <p class="mt-2 text-sm text-slate-600">Parent selectors finally landed in CSS. Here's what you can build with them.</p>
+        <span class="mt-4 inline-block text-sm font-semibold text-sky-600">Read more →</span>
+      </a>
+    </div>
+  </body>
+</html>

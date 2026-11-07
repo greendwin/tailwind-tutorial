@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Lesson</title>
+    <link rel="stylesheet" href="/app/app.css" />
+  </head>
+  <body class="h-screen overflow-hidden bg-stone-50 text-stone-800 antialiased">
+    <div class="flex h-full flex-col lg:flex-row">
+      <!-- Lesson text -->
+      <section class="flex min-h-0 flex-col border-stone-200 lg:w-[46%] lg:border-r">
+        <nav class="flex items-center gap-2 border-b border-stone-200 bg-white px-5 py-2 text-sm">
+          <a href="/" class="font-medium text-stone-500 hover:text-stone-900">← All lessons</a>
+          <span class="flex-1"></span>
+          <a id="prev" class="rounded px-2 py-1 text-stone-500 hover:bg-stone-100">‹ Prev</a>
+          <a id="next" class="rounded px-2 py-1 text-stone-500 hover:bg-stone-100">Next ›</a>
+        </nav>
+        <article
+          id="lesson"
+          class="prose prose-stone max-w-none flex-1 overflow-y-auto px-8 py-8 prose-headings:scroll-mt-4 prose-code:before:content-none prose-code:after:content-none prose-code:rounded prose-code:bg-stone-200/70 prose-code:px-1 prose-code:font-normal prose-pre:bg-stone-900 [&_pre_code]:bg-transparent [&_pre_code]:p-0"
+        ></article>
+      </section>
+
+      <!-- Live exercise preview -->
+      <section class="flex min-h-0 flex-1 flex-col">
+        <div id="tabs" class="flex items-center gap-1 overflow-x-auto border-b border-stone-200 bg-white px-3 py-2 text-sm"></div>
+        <div class="relative flex-1 bg-[repeating-conic-gradient(var(--color-stone-100)_0_25%,white_0_50%)] bg-size-[20px_20px]">
+          <iframe id="preview" class="absolute inset-0 size-full bg-white"></iframe>
+          <p id="empty" class="absolute inset-0 hidden place-items-center text-stone-400">This lesson has no exercise files — follow the instructions on the left.</p>
+        </div>
+        <p id="path" class="border-t border-stone-200 bg-white px-4 py-1.5 font-mono text-xs text-stone-500"></p>
+      </section>
+    </div>
+
+    <script type="module">
+      import { marked } from "marked";
+      import { lessons } from "/app/course.js";
+
+      const slug = new URLSearchParams(location.search).get("l") ?? lessons[0].slug;
+      const i = lessons.findIndex((l) => l.slug === slug);
+      const lesson = lessons[i];
+      document.title = lesson.title;
+      document.getElementById("lesson").innerHTML = marked.parse(lesson.md);
+
+      for (const [id, target] of [["prev", lessons[i - 1]], ["next", lessons[i + 1]]]) {
+        const a = document.getElementById(id);
+        if (target) a.href = `/lesson.html?l=${target.slug}`;
+        else a.classList.add("invisible");
+      }
+
+      const tabs = document.getElementById("tabs");
+      const frame = document.getElementById("preview");
+      const status = { done: "✓ ", "in progress": "… ", todo: "" };
+
+      function show(ex) {
+        frame.src = ex.path;
+        document.getElementById("path").textContent = `edit: ${ex.path.slice(1)}`;
+        for (const t of tabs.children) {
+          const active = t.dataset.path === ex.path;
+          t.className = `shrink-0 rounded-md px-3 py-1 font-medium ${active ? "bg-stone-900 text-white" : "text-stone-600 hover:bg-stone-100"}`;
+        }
+        history.replaceState(null, "", `?l=${slug}&ex=${ex.id}`);
+      }
+
+      if (lesson.exercises.length === 0) {
+        frame.classList.add("hidden");
+        document.getElementById("empty").classList.replace("hidden", "grid");
+      }
+      for (const ex of lesson.exercises) {
+        const b = document.createElement("button");
+        b.dataset.path = ex.path;
+        b.textContent = `${status[ex.status] ?? ""}${ex.id} ${ex.name}`;
+        b.onclick = () => show(ex);
+        tabs.append(b);
+      }
+      const open = document.createElement("a");
+      open.textContent = "open in new tab ↗";
+      open.className = "ml-auto shrink-0 px-2 text-stone-400 hover:text-stone-700";
+      open.target = "_blank";
+      tabs.append(open);
+      frame.addEventListener("load", () => (open.href = frame.src));
+
+      const wanted = new URLSearchParams(location.search).get("ex");
+      const first = lesson.exercises.find((e) => e.id === wanted) ?? lesson.exercises[0];
+      if (first) show(first);
+    </script>
+  </body>
+</html>

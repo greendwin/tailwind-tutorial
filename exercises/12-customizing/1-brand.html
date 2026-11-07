@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>12.1 · Brand theme</title>
+    <!-- note: this exercise uses its OWN stylesheet -->
+    <link rel="stylesheet" href="./theme.css" />
+  </head>
+  <!--
+    EXERCISE 12.1: Brand theme (see lessons/12-customizing.md)
+    Replace indigo → brand, add font-display, rounded-card, shadow-card,
+    and switch page/card colors to semantic bg-surface / text-fg. Add a theme toggle.
+  -->
+  <body class="min-h-screen bg-white text-slate-900">
+    <header class="flex items-center px-8 py-5">
+      <span class="text-xl font-bold text-indigo-600">Lumen</span>
+      <!-- TODO: theme toggle button -->
+    </header>
+
+    <main class="mx-auto max-w-4xl px-8 py-16">
+      <p class="font-semibold text-indigo-600">Introducing Lumen 2.0</p>
+      <h1 class="mt-2 text-5xl font-bold tracking-tight">Light up your analytics</h1>
+      <p class="mt-4 max-w-xl text-lg text-slate-600">Dashboards your whole team actually understands. Set up in minutes, no SQL needed.</p>
+      <div class="mt-8 flex gap-4">
+        <a href="#" class="rounded-lg bg-indigo-600 px-5 py-3 font-semibold text-white">Start free</a>
+        <a href="#" class="rounded-lg bg-indigo-50 px-5 py-3 font-semibold text-indigo-700">Book a demo</a>
+      </div>
+
+      <div class="mt-16 grid grid-cols-3 gap-6">
+        <div class="rounded-xl bg-white p-6 shadow-md ring-1 ring-slate-900/5">
+          <div class="grid size-10 place-items-center rounded-lg bg-indigo-100 text-indigo-700">⚡</div>
+          <h3 class="mt-4 font-semibold">Real-time</h3>
+          <p class="mt-1 text-sm text-slate-600">Data updates the moment it lands.</p>
+        </div>
+        <div class="rounded-xl bg-white p-6 shadow-md ring-1 ring-slate-900/5">
+          <div class="grid size-10 place-items-center rounded-lg bg-indigo-100 text-indigo-700">🔒</div>
+          <h3 class="mt-4 font-semibold">Secure</h3>
+          <p class="mt-1 text-sm text-slate-600">SSO, audit logs and row-level permissions.</p>
+        </div>
+        <div class="rounded-xl bg-white p-6 shadow-md ring-1 ring-slate-900/5">
+          <div class="grid size-10 place-items-center rounded-lg bg-indigo-100 text-indigo-700">🧩</div>
+          <h3 class="mt-4 font-semibold">Integrations</h3>
+          <p class="mt-1 text-sm text-slate-600">Connect 200+ sources with one click.</p>
+        </div>
+      </div>
+    </main>
+  </body>
+</html>

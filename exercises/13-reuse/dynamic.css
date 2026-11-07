@@ -1,0 +1,4 @@
+/* Stylesheet for exercise 13.2 only. It scans ONLY these two files. */
+@import "tailwindcss" source(none);
+@source "./2-dynamic.html";
+@source "./dynamic.js";

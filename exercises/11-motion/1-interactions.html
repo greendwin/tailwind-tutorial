@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>11.1 · Micro-interactions</title>
+    <link rel="stylesheet" href="/src/styles.css" />
+  </head>
+  <!--
+    EXERCISE 11.1: Micro-interactions (see lessons/11-motion.md)
+    Add transitions/transforms to each numbered item.
+  -->
+  <body class="bg-slate-50 p-10">
+    <div class="grid max-w-3xl grid-cols-2 gap-8">
+      <!-- 1. smooth hover color + press scale -->
+      <div>
+        <p class="mb-2 text-xs font-semibold text-slate-500 uppercase">1 · Button</p>
+        <button class="rounded-lg bg-indigo-600 px-5 py-2.5 font-semibold text-white">Save changes</button>
+      </div>
+
+      <!-- 2. lift + bigger shadow on hover -->
+      <div>
+        <p class="mb-2 text-xs font-semibold text-slate-500 uppercase">2 · Card</p>
+        <div class="rounded-xl bg-white p-5 shadow-sm ring-1 ring-slate-900/5">
+          <p class="font-semibold">Hover me</p>
+          <p class="text-sm text-slate-500">I should float up a little.</p>
+        </div>
+      </div>
+
+      <!-- 3. arrow slides right when the whole link is hovered -->
+      <div>
+        <p class="mb-2 text-xs font-semibold text-slate-500 uppercase">3 · Arrow link</p>
+        <a href="#" class="inline-flex items-center gap-2 font-semibold text-indigo-600">
+          Get started
+          <span>→</span>
+        </a>
+      </div>
+
+      <!-- 4. gear rotates on hover -->
+      <div>
+        <p class="mb-2 text-xs font-semibold text-slate-500 uppercase">4 · Gear</p>
+        <button class="text-3xl">⚙️</button>
+      </div>
+
+      <!-- 5. toggle switch: knob slides when checked (the checkbox is visually hidden but works) -->
+      <div>
+        <p class="mb-2 text-xs font-semibold text-slate-500 uppercase">5 · Switch</p>
+        <label class="relative inline-block h-7 w-12 cursor-pointer">
+          <input type="checkbox" class="peer sr-only" />
+          <span class="absolute inset-0 rounded-full bg-slate-300"></span>
+          <span class="absolute top-1 left-1 size-5 rounded-full bg-white shadow-sm"></span>
+        </label>
+      </div>
+
+      <!-- 6. chevron rotates when <details> is open -->
+      <div>
+        <p class="mb-2 text-xs font-semibold text-slate-500 uppercase">6 · Accordion</p>
+        <details class="rounded-lg bg-white p-4 ring-1 ring-slate-900/5">
+          <summary class="flex cursor-pointer list-none items-center justify-between font-semibold">
+            What is Tailwind?
+            <span>⌄</span>
+          </summary>
+          <p class="mt-2 text-sm text-slate-600">A utility-first CSS framework.</p>
+        </details>
+      </div>
+    </div>
+  </body>
+</html>
