@@ -41,7 +41,15 @@
       const i = lessons.findIndex((l) => l.slug === slug);
       const lesson = lessons[i];
       document.title = lesson.title;
-      document.getElementById("lesson").innerHTML = marked.parse(lesson.md);
+      const article = document.getElementById("lesson");
+      article.innerHTML = marked.parse(lesson.md);
+
+      // Keep the reading position across reloads (e.g. when PROGRESS.md or a lesson changes)
+      const scrollKey = `scroll:${slug}`;
+      try {
+        article.scrollTop = Number(sessionStorage.getItem(scrollKey)) || 0;
+        article.addEventListener("scroll", () => sessionStorage.setItem(scrollKey, article.scrollTop), { passive: true });
+      } catch {}
 
       for (const [id, target] of [["prev", lessons[i - 1]], ["next", lessons[i + 1]]]) {
         const a = document.getElementById(id);
