@@ -10,8 +10,8 @@ The dashboard reads the **Status** column. Keep the table format intact.
 | 01.2 | 01-utility-first/2-translate | done | All mappings right, style block gone. Missed the display: inline-block translation (vertical padding on inline spans). |
 | 02.1 | 02-spacing-sizing/1-pricing-card | done | Nested space-y hierarchy, max-w-xs mx-auto, w-full button, spaced list. Polish: vertical padding (py-4) smaller than horizontal (px-8). |
 | 02.2 | 02-spacing-sizing/2-spec | done | h-33 (no arbitrary needed), flex-1, size-14, overflow-clip, -mx-8 -mt-8 bleed. Fixed swapped stat padding. Optional: stack number/label in stats. |
-| 03.1 | 03-typography/1-article | todo | |
-| 03.2 | 03-typography/2-long-text | todo | |
+| 03.1 | 03-typography/1-article | done | Fixed text-bold→font-bold (unknown classes fail silently), muted blockquote, hoisted list/leading styles to parents. Later darkened h1 (slate-800). |
+| 03.2 | 03-typography/2-long-text | done | truncate, line-clamp-2, wrap-anywhere (v4.1 overflow-wrap). Clean first try. |
 | 04.1 | 04-colors-surfaces/1-buttons | todo | |
 | 04.2 | 04-colors-surfaces/2-stats | todo | |
 | 05.1 | 05-flexbox/1-navbar | todo | |
@@ -43,6 +43,8 @@ The dashboard reads the **Status** column. Keep the table format intact.
 ## Session log
 
 <!-- Claude: one line per session, newest first. Date, what was covered, what to pick up next. -->
+- 2026-11-07: Checked 03.2 (done, first try). Lesson 03 complete. Next: lesson 04, exercise 04.1 buttons.
+- 2026-11-07: Checked 03.1: in progress, then rechecked, done. Next: 03.2 long text.
 - 2026-11-07: Checked 02.1, 02.2: in progress, then rechecked, both done. Next: lesson 03, exercise 03.1 article.
 - 2026-11-07: Checked 01.1, 01.2 (both done). Next: lesson 02, exercise 02.1 pricing card.
 - 2026-11-07: Checked 00.1 (done). Next: lesson 01, exercise 01.1 notification.

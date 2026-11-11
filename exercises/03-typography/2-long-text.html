@@ -1,37 +1,43 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>03.2 · Long text</title>
-    <link rel="stylesheet" href="/src/styles.css" />
-  </head>
-  <!--
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>03.2 · Long text</title>
+  <link rel="stylesheet" href="/src/styles.css" />
+</head>
+<!--
     EXERCISE 03.2: Taming long text (see lessons/03-typography.md)
     Fix the three cards so nothing overflows. Only touch the elements marked FIX.
   -->
-  <body class="bg-slate-100 p-8">
-    <div class="space-y-4">
-      <div class="w-64 rounded-lg bg-white p-4 shadow-sm">
-        <p class="text-xs text-slate-500 uppercase">1 · File</p>
-        <!-- FIX: one line, ends with "…" -->
-        <p class="font-medium text-slate-900">quarterly-financial-report-final-v3-REALLY-final-approved.pdf</p>
-      </div>
 
-      <div class="w-64 rounded-lg bg-white p-4 shadow-sm">
-        <p class="text-xs text-slate-500 uppercase">2 · Description</p>
-        <!-- FIX: at most 2 lines -->
-        <p class="text-sm text-slate-600">
-          This product ships with a lifetime warranty, free returns within ninety days, and a dedicated support line that is open
-          around the clock, every day of the year including holidays.
-        </p>
-      </div>
-
-      <div class="w-64 rounded-lg bg-white p-4 shadow-sm">
-        <p class="text-xs text-slate-500 uppercase">3 · Link</p>
-        <!-- FIX: must wrap instead of overflowing -->
-        <p class="font-mono text-sm text-sky-700">https://example.com/a/very/long/path/that/just/keeps/going/without/any/spaces/at/all</p>
-      </div>
+<body class="bg-slate-100 p-8">
+  <div class="space-y-4">
+    <div class="w-64 rounded-lg bg-white p-4 shadow-sm">
+      <p class="text-xs text-slate-500 uppercase">1 · File</p>
+      <!-- FIX: one line, ends with "…" -->
+      <p class="truncate font-medium text-slate-900">
+        quarterly-financial-report-final-v3-REALLY-final-approved.pdf</p>
     </div>
-  </body>
+
+    <div class="w-64 rounded-lg bg-white p-4 shadow-sm">
+      <p class="text-xs text-slate-500 uppercase">2 · Description</p>
+      <!-- FIX: at most 2 lines -->
+      <p class="line-clamp-2 text-sm text-slate-600">
+        This product ships with a lifetime warranty, free returns within ninety days, and a dedicated support line that
+        is open
+        around the clock, every day of the year including holidays.
+      </p>
+    </div>
+
+    <div class="w-64 rounded-lg bg-white p-4 shadow-sm">
+      <p class="text-xs text-slate-500 uppercase">3 · Link</p>
+      <!-- FIX: must wrap instead of overflowing -->
+      <p class="wrap-anywhere font-mono text-sm text-sky-700">
+        https://example.com/a/very/long/path/that/just/keeps/going/without/any/spaces/at/all</p>
+    </div>
+  </div>
+</body>
+
 </html>
