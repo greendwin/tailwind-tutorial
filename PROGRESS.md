@@ -14,9 +14,9 @@ The dashboard reads the **Status** column. Keep the table format intact.
 | 03.2 | 03-typography/2-long-text | done | truncate, line-clamp-2, wrap-anywhere (v4.1 overflow-wrap). Clean first try. |
 | 04.1 | 04-colors-surfaces/1-buttons | done | Fixed all 3 (shared weight, solid red-500 danger, shadow-md sky glow) and switched borders→rings so all are 32px tall. Polish left: mixes gray (Secondary) with slate (page). |
 | 04.2 | 04-colors-surfaces/2-stats | done | Took 3 rounds. Same-hue soft-badge pills (green/red bg+border+text), sized icon squares, number/label hierarchy, ring-slate-600/5. Then applied polish: white pill text + bg-white/10 icon on featured card. Featured label now text-white/80. Fully polished. |
-| 05.1 | 05-flexbox/1-navbar | todo | |
-| 05.2 | 05-flexbox/2-comments | todo | |
-| 05.3 | 05-flexbox/3-page-layout | todo | |
+| 05.1 | 05-flexbox/1-navbar | done | flex-1 on search, items-center, no justify-between. Recheck: swapped **:whitespace-nowrap for shrink-0, nav gap-6, matched rounded-lg. Chose min-w-30 floor on search (deliberate; overflow at narrow widths is a lesson 08 job). |
+| 05.2 | 05-flexbox/2-comments | done | 4 rounds. Key struggle: min-w-0 chain (tried max-w-80 first; fixed with grow min-w-0 on column). ml-auto menu, ml-10 reply (avatar 8 + gap 2), removed dead gap-4. Needed a hint for the indent. Then applied polish: reply in nested ul inside parent li, parent li space-y-4 (tighter than list's space-y-6), ml-10 moved to the nested ul. |
+| 05.3 | 05-flexbox/3-page-layout | done | First try: body min-h-screen flex flex-col, main flex-1. Used min-h (not h) so long content works. Mentioned min-h-dvh + grid-rows-[auto_1fr_auto] alternative. |
 | 06.1 | 06-grid/1-bento | todo | |
 | 06.2 | 06-grid/2-app-shell | todo | |
 | 07.1 | 07-states/1-form | todo | |
@@ -43,6 +43,7 @@ The dashboard reads the **Status** column. Keep the table format intact.
 ## Session log
 
 <!-- Claude: one line per session, newest first. Date, what was covered, what to pick up next. -->
+- 2026-11-09: Checked 05.1 (done, first try), rechecked after polish. Checked 05.2: 4 rounds, done (min-w-0 chain was the lesson), then polished. Checked 05.3 (done, first try). Lesson 05 complete. Next: lesson 06, exercise 06.1 bento.
 - 2026-11-08: Checked 04.2: 3 rounds, done (soft-badge hue matching was the sticking point). Lesson 04 complete. Next: lesson 05, exercise 05.1 navbar.
 - 2026-11-08: Checked 04.1: in progress, then rechecked, done (rings for equal heights). Next: 04.2 stat cards.
 - 2026-11-07: Checked 03.2 (done, first try). Lesson 03 complete. Next: lesson 04, exercise 04.1 buttons.
