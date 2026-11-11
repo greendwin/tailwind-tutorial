@@ -19,8 +19,8 @@ The dashboard reads the **Status** column. Keep the table format intact.
 | 05.3 | 05-flexbox/3-page-layout | done | First try: body min-h-screen flex flex-col, main flex-1. Used min-h (not h) so long content works. Mentioned min-h-dvh + grid-rows-[auto_1fr_auto] alternative. |
 | 06.1 | 06-grid/1-bento | done | First try. Spans + auto-rows right; then polished: `*:` centering, inherited text styles hoisted to grid. |
 | 06.2 | 06-grid/2-app-shell | done | 5 rounds. Final: h-dvh grid-cols-[16rem_1fr] grid-rows-[auto_1fr], col-span-full header, overflow-auto main (bonus), auto-fill minmax(14rem,1fr) cards. Struggles: viewport-relative sidebar at first; auto-row stretching; invalid track values (`content`, empty `fit-content()`) silently dropped. Lesson: verify arbitrary values in DevTools. |
-| 07.1 | 07-states/1-form | todo | |
-| 07.2 | 07-states/2-cards | todo | |
+| 07.1 | 07-states/1-form | done | 2 rounds. Round 1 relied on UA focus outline + unstyled file button; fixed both with explicit focus rings and file: pill. |
+| 07.2 | 07-states/2-cards | done | 2 rounds. Round 1 recolored the category label instead of the title; fixed, plus added group-focus-visible reveal and a ring on the selected plan. |
 | 08.1 | 08-responsive/1-product | todo | |
 | 08.2 | 08-responsive/2-container | todo | |
 | 09.1 | 09-positioning/1-overlay-card | todo | |
@@ -45,6 +45,10 @@ The dashboard reads the **Status** column. Keep the table format intact.
 <!-- Claude: one line per session, newest first. Date, what was covered, what to pick up next. -->
 - 2026-11-09: Checked 05.1 (done, first try), rechecked after polish. Checked 05.2: 4 rounds, done (min-w-0 chain was the lesson), then polished. Checked 05.3 (done, first try). Lesson 05 complete. Next: lesson 06, exercise 06.1 bento.
 - 2026-11-09: Checked 06.1 (done, first try), rechecked after polish. Next: 06.2 app shell.
+- 2026-11-11: Rechecked 07.2: done (title group-hover, keyboard reveal via group-focus-visible). Lesson 07 complete. Next: lesson 08, exercise 08.1 responsive product.
+- 2026-11-11: Checked 07.2: in progress, title group-hover missing; selected state subtle.
+- 2026-11-11: Rechecked 07.1: done (explicit focus rings on every control, file: pill). Next: 07.2 plan picker.
+- 2026-11-10: Checked 07.1: in progress, only the file: button styling left.
 - 2026-11-09: Checked 06.2: 5 rounds, done (auto-row stretching + valid grid track keywords were the lesson). Lesson 06 complete. Next: lesson 07, exercise 07.1 form.
 - 2026-11-08: Checked 04.2: 3 rounds, done (soft-badge hue matching was the sticking point). Lesson 04 complete. Next: lesson 05, exercise 05.1 navbar.
 - 2026-11-08: Checked 04.1: in progress, then rechecked, done (rings for equal heights). Next: 04.2 stat cards.
