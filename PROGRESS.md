@@ -5,7 +5,7 @@ The dashboard reads the **Status** column. Keep the table format intact.
 
 | ID | Exercise | Status | Notes |
 | --- | --- | --- | --- |
-| 00.1 | 00-start-here/1-hello | todo | |
+| 00.1 | 00-start-here/1-hello | done | Clean: swapped color (no conflicting slate class), underline, italic. |
 | 01.1 | 01-utility-first/1-notification | todo | |
 | 01.2 | 01-utility-first/2-translate | todo | |
 | 02.1 | 02-spacing-sizing/1-pricing-card | todo | |
@@ -43,3 +43,4 @@ The dashboard reads the **Status** column. Keep the table format intact.
 ## Session log
 
 <!-- Claude: one line per session, newest first. Date, what was covered, what to pick up next. -->
+- 2026-11-07: Checked 00.1 (done). Next: lesson 01, exercise 01.1 notification.
