@@ -6,8 +6,8 @@ The dashboard reads the **Status** column. Keep the table format intact.
 | ID | Exercise | Status | Notes |
 | --- | --- | --- | --- |
 | 00.1 | 00-start-here/1-hello | done | Clean: swapped color (no conflicting slate class), underline, italic. |
-| 01.1 | 01-utility-first/1-notification | todo | |
-| 01.2 | 01-utility-first/2-translate | todo | |
+| 01.1 | 01-utility-first/1-notification | done | Same-hue green scale (100 bg / 300 border / 800+700 text), colored border, mb-2 gap. |
+| 01.2 | 01-utility-first/2-translate | done | All mappings right, style block gone. Missed the display: inline-block translation (vertical padding on inline spans). |
 | 02.1 | 02-spacing-sizing/1-pricing-card | todo | |
 | 02.2 | 02-spacing-sizing/2-spec | todo | |
 | 03.1 | 03-typography/1-article | todo | |
@@ -43,4 +43,5 @@ The dashboard reads the **Status** column. Keep the table format intact.
 ## Session log
 
 <!-- Claude: one line per session, newest first. Date, what was covered, what to pick up next. -->
+- 2026-11-07: Checked 01.1, 01.2 (both done). Next: lesson 02, exercise 02.1 pricing card.
 - 2026-11-07: Checked 00.1 (done). Next: lesson 01, exercise 01.1 notification.

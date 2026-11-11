@@ -1,18 +1,37 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Playground</title>
-    <link rel="stylesheet" href="/src/styles.css" />
-  </head>
-  <!--
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Playground</title>
+  <link rel="stylesheet" href="/src/styles.css" />
+</head>
+<!--
     PLAYGROUND — your free sandbox. Try things here while reading a lesson.
     Save the file and the browser updates instantly.
     Want a fresh page? Copy this file to playground/whatever.html and open /playground/whatever.html
   -->
-  <body class="min-h-screen bg-white p-8">
-    <h1 class="text-3xl font-bold text-sky-600">Hello, Tailwind 👋</h1>
-    <p class="mt-2 text-slate-600">Edit <code>playground/index.html</code> and watch this page change.</p>
-  </body>
+
+<body class="min-h-screen bg-gray-400 p-8 flex flex-col gap-2 items-start">
+  <h1 class="text-3xl font-bold text-sky-800">Hello, Tailwind 👋</h1>
+  <p class="mt-2 text-slate-700">Edit <code>playground/index.html</code> and watch this page change.</p>
+  <button class="bg-rose-600 text-rose-100 font-semibold px-8 py-2 rounded-full">
+    Click me
+  </button>
+  <!-- inline: padding paints but doesn't push lines apart -->
+  <p class="w-64">
+    Some text before
+    <span class="py-3 px-3 bg-indigo-200/70">inline span</span>
+    and enough text after it to wrap onto a second line.
+  </p>
+
+  <!-- inline-block: the line grows to fit the padding -->
+  <p class="w-64">
+    Some text before
+    <span class="inline-block py-3 px-3 bg-indigo-200/70">inline-block</span>
+    and enough text after it to wrap onto a second line.
+  </p>
+</body>
+
 </html>

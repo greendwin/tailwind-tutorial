@@ -1,19 +1,27 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>01.1 · Notification</title>
-    <link rel="stylesheet" href="/src/styles.css" />
-  </head>
-  <!--
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>01.1 · Notification</title>
+  <link rel="stylesheet" href="/src/styles.css" />
+</head>
+<!--
     EXERCISE 01.1: Style a notification (see lessons/01-utility-first.md)
     Make this look like a polished "success" toast using only Tailwind classes.
   -->
-  <body class="p-10">
-    <div>
-      <p>Changes saved</p>
-      <p>Your profile was updated successfully. It may take a minute to show everywhere.</p>
-    </div>
-  </body>
+
+<body class="p-10">
+  <div class="
+      max-w-xl p-4
+      border rounded-lg
+      bg-green-100 border-green-300
+  ">
+    <p class="mb-2 font-bold text-green-800">Changes saved</p>
+    <p class="text-sm text-green-700">Your profile was updated successfully. It may take a minute to show
+      everywhere.</p>
+  </div>
+</body>
+
 </html>
