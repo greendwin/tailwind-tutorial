@@ -1,31 +1,44 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>02.1 · Pricing card</title>
-    <link rel="stylesheet" href="/src/styles.css" />
-  </head>
-  <!--
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>02.1 · Pricing card</title>
+  <link rel="stylesheet" href="/src/styles.css" />
+</head>
+<!--
     EXERCISE 02.1: Pricing card spacing (see lessons/02-spacing-sizing.md)
     Colors & type are done. Add ONLY spacing & sizing: width, centering, padding, margins, gaps.
   -->
-  <body class="bg-slate-100">
-    <div class="rounded-2xl bg-white shadow-lg">
-      <div>
-        <h2 class="text-sm font-semibold text-indigo-600 uppercase">Pro</h2>
-        <p class="text-5xl font-bold text-slate-900">$19<span class="text-base font-normal text-slate-500">/month</span></p>
-        <p class="text-slate-600">Everything you need to ship side projects.</p>
-      </div>
 
-      <ul class="text-slate-700">
-        <li>✓ Unlimited projects</li>
-        <li>✓ Custom domains</li>
-        <li>✓ Analytics dashboard</li>
-        <li>✓ Priority support</li>
-      </ul>
-
-      <button class="rounded-lg bg-indigo-600 font-semibold text-white">Start free trial</button>
+<body class="bg-slate-100 p-6">
+  <div class="
+      max-w-xs mx-auto px-8 py-6
+      rounded-2xl bg-white shadow-lg
+      space-y-4
+  ">
+    <div class="space-y-2">
+      <h2 class="
+          text-sm font-semibold text-indigo-600 uppercase
+      ">Pro</h2>
+      <p class="text-5xl font-bold text-slate-900">$19<span class="text-base font-normal text-slate-500">/month</span>
+      </p>
+      <p class="text-slate-600">Everything you need to ship side projects.</p>
     </div>
-  </body>
+
+    <ul class="text-slate-700 space-y-1">
+      <li>✓ Unlimited projects</li>
+      <li>✓ Custom domains</li>
+      <li>✓ Analytics dashboard</li>
+      <li>✓ Priority support</li>
+    </ul>
+
+    <button class="
+        w-full p-3
+        rounded-lg bg-indigo-600 font-semibold text-white
+    ">Start free trial</button>
+  </div>
+</body>
+
 </html>
