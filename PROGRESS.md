@@ -23,8 +23,8 @@ The dashboard reads the **Status** column. Keep the table format intact.
 | 07.2 | 07-states/2-cards | done | 2 rounds. Round 1 recolored the category label instead of the title; fixed, plus added group-focus-visible reveal and a ring on the selected plan. |
 | 08.1 | 08-responsive/1-product | done | 3 rounds. Mobile-first nav swap and md:flex layout right from the start. Missed: h1 size, page max-width (then aligned header inner wrapper with main, nicely), phone grid columns (base class = phone took a nudge). |
 | 08.2 | 08-responsive/2-container | done | 2 rounds. @container on wrappers, @sm breakpoint > sidebar. Fixed the collapsing image with @sm:flex-2 / @sm:flex-3 on both copies (identical now). Asked about stretch vs aspect-ratio in the row: explained align-self / cover-image tradeoff. |
-| 09.1 | 09-positioning/1-overlay-card | todo | |
-| 09.2 | 09-positioning/2-sticky-modal | todo | |
+| 09.1 | 09-positioning/1-overlay-card | done | 2 rounds. Avoided the overflow-hidden clipping trap; fixed flat overlay -> gradient, rounded-b-xl, explicit avatar anchoring. |
+| 09.2 | 09-positioning/2-sticky-modal | done | First try. hidden data-open:flex done right. Polished: header z-20 under modal z-50, p-4 gutter on backdrop. |
 | 10.1 | 10-dark-mode/1-profile | todo | |
 | 10.2 | 10-dark-mode/2-toggle | todo | |
 | 11.1 | 11-motion/1-interactions | todo | |
@@ -43,6 +43,8 @@ The dashboard reads the **Status** column. Keep the table format intact.
 ## Session log
 
 <!-- Claude: one line per session, newest first. Date, what was covered, what to pick up next. -->
+- 2026-11-11: Checked 09.2 (done, first try). Rechecked after polish. Lesson 09 complete. Next: lesson 10, exercise 10.1 dark profile.
+- 2026-11-11: Checked 09.1: 2 rounds, done (static-position luck vs explicit anchoring was the lesson). Rechecked after polish. Next: 09.2 sticky header & modal.
 - 2026-11-09: Checked 05.1 (done, first try), rechecked after polish. Checked 05.2: 4 rounds, done (min-w-0 chain was the lesson), then polished. Checked 05.3 (done, first try). Lesson 05 complete. Next: lesson 06, exercise 06.1 bento.
 - 2026-11-09: Checked 06.1 (done, first try), rechecked after polish. Next: 06.2 app shell.
 - 2026-11-11: Rechecked 07.2: done (title group-hover, keyboard reveal via group-focus-visible). Lesson 07 complete. Next: lesson 08, exercise 08.1 responsive product.
