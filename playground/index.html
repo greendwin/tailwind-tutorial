@@ -17,9 +17,32 @@
   <div class="flex flex-col gap-2 items-start">
     <h1 class="text-3xl font-bold tracking-tight text-sky-800">Hello, Tailwind 👋</h1>
     <p class="mt-2 text-slate-700">Edit <code>playground/index.html</code> and watch this page change.</p>
-    <button class="bg-rose-600 text-rose-100 font-semibold px-8 py-2 rounded-full">
+    <button class="
+          px-8 py-2 rounded-full 
+          text-rose-100 font-semibold 
+          bg-rose-600/80 hover:bg-rose-600/85
+          shadow-md active:shadow-xs
+          active:translate-y-[0.5px] transition-all
+          cursor-pointer">
       Click me
     </button>
+    <div class="
+      px-2 py-1 rounded
+      text-xs font-semibold tracking-wider uppercase
+      text-sky-900 bg-sky-500/10
+      ring-1 ring-sky-500/20
+      cursor-default
+    ">Label</div>
+    <div class="
+        px-2 py-1 rounded
+        font-medium
+        bg-linear-to-r
+        from-red-400
+        via-lime-700
+        to-indigo-900
+        bg-clip-text
+        text-transparent
+    ">Gradient Text</div>
   </div>
 
   <div class="space-y-4">

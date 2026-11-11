@@ -1,45 +1,84 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>04.2 · Stat cards</title>
-    <link rel="stylesheet" href="/src/styles.css" />
-  </head>
-  <!--
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>04.2 · Stat cards</title>
+  <link rel="stylesheet" href="/src/styles.css" />
+</head>
+<!--
     EXERCISE 04.2: Stat cards (see lessons/04-colors-surfaces.md)
     Layout classes (grid, flex, gaps) are given. You add colors, borders, radius, shadows, gradients.
     Padding/sizing is up to you too.
   -->
-  <body class="bg-slate-50 p-10">
-    <div class="grid max-w-4xl grid-cols-3 gap-6">
-      <div>
-        <div class="flex items-start justify-between">
-          <div>📈</div>
-          <span>+12%</span>
-        </div>
-        <p>$48,210</p>
-        <p>Revenue this month</p>
-      </div>
 
-      <div>
-        <div class="flex items-start justify-between">
-          <div>👥</div>
-          <span>−3%</span>
-        </div>
-        <p>1,284</p>
-        <p>Active users</p>
+<body class="bg-slate-50 p-10">
+  <div class="grid max-w-4xl grid-cols-3 gap-6">
+    <div class="
+        p-3 rounded-md
+        bg-white ring-1 ring-slate-600/5
+        shadow-md
+    ">
+      <div class="flex items-start justify-between">
+        <div class="
+            size-6 flex items-center justify-center leading-none
+            bg-emerald-400/10 rounded
+        ">📈</div>
+        <span class="
+            px-1 py-0.5 rounded-full
+            text-green-600 text-xs font-semibold tracking-wider
+            bg-green-300/10 border border-green-300/20
+        ">+12%</span>
       </div>
-
-      <!-- featured card: gradient + white text -->
-      <div>
-        <div class="flex items-start justify-between">
-          <div>⭐</div>
-          <span>+28%</span>
-        </div>
-        <p>94.2%</p>
-        <p>Customer satisfaction</p>
-      </div>
+      <p class="my-1 text-2xl font-medium">$48,210</p>
+      <p class="text-sm text-slate-600">Revenue this month</p>
     </div>
-  </body>
+
+    <div class="
+        p-3 rounded-md
+        bg-white ring-1 ring-slate-600/5
+        shadow-md
+    ">
+      <div class="flex items-start justify-between">
+        <div class="
+            size-6 flex items-center justify-center leading-none
+          bg-fuchsia-400/10 rounded
+        ">👥</div>
+        <span class="
+            px-1 py-0.5 rounded-full
+            text-red-600 text-xs font-semibold tracking-wider
+            bg-red-300/10 border border-red-300/20">−3%</span>
+      </div>
+      <p class="my-1 text-2xl font-medium">1,284</p>
+      <p class="text-sm text-slate-600">Active users</p>
+    </div>
+
+    <!-- featured card: gradient + white text -->
+    <div class="
+        p-3 rounded-md
+        ring-1 ring-white/90
+        bg-linear-300
+        from-amber-500
+        to-rose-400
+        text-white
+        shadow-md
+    ">
+      <div class="flex items-start justify-between">
+        <div class="
+            size-6 flex items-center justify-center leading-none
+            bg-white/10 rounded
+        ">⭐</div>
+        <span class="
+            px-1 py-0.5 rounded-full
+            text-white text-xs font-bold tracking-wider
+            bg-white/10 border border-white/20
+        ">+28%</span>
+      </div>
+      <p class="my-1 text-2xl font-medium">94.2%</p>
+      <p class="text-sm text-white/80">Customer satisfaction</p>
+    </div>
+  </div>
+</body>
+
 </html>
