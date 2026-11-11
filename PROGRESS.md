@@ -21,8 +21,8 @@ The dashboard reads the **Status** column. Keep the table format intact.
 | 06.2 | 06-grid/2-app-shell | done | 5 rounds. Final: h-dvh grid-cols-[16rem_1fr] grid-rows-[auto_1fr], col-span-full header, overflow-auto main (bonus), auto-fill minmax(14rem,1fr) cards. Struggles: viewport-relative sidebar at first; auto-row stretching; invalid track values (`content`, empty `fit-content()`) silently dropped. Lesson: verify arbitrary values in DevTools. |
 | 07.1 | 07-states/1-form | done | 2 rounds. Round 1 relied on UA focus outline + unstyled file button; fixed both with explicit focus rings and file: pill. |
 | 07.2 | 07-states/2-cards | done | 2 rounds. Round 1 recolored the category label instead of the title; fixed, plus added group-focus-visible reveal and a ring on the selected plan. |
-| 08.1 | 08-responsive/1-product | todo | |
-| 08.2 | 08-responsive/2-container | todo | |
+| 08.1 | 08-responsive/1-product | done | 3 rounds. Mobile-first nav swap and md:flex layout right from the start. Missed: h1 size, page max-width (then aligned header inner wrapper with main, nicely), phone grid columns (base class = phone took a nudge). |
+| 08.2 | 08-responsive/2-container | done | 2 rounds. @container on wrappers, @sm breakpoint > sidebar. Fixed the collapsing image with @sm:flex-2 / @sm:flex-3 on both copies (identical now). Asked about stretch vs aspect-ratio in the row: explained align-self / cover-image tradeoff. |
 | 09.1 | 09-positioning/1-overlay-card | todo | |
 | 09.2 | 09-positioning/2-sticky-modal | todo | |
 | 10.1 | 10-dark-mode/1-profile | todo | |
@@ -46,6 +46,8 @@ The dashboard reads the **Status** column. Keep the table format intact.
 - 2026-11-09: Checked 05.1 (done, first try), rechecked after polish. Checked 05.2: 4 rounds, done (min-w-0 chain was the lesson), then polished. Checked 05.3 (done, first try). Lesson 05 complete. Next: lesson 06, exercise 06.1 bento.
 - 2026-11-09: Checked 06.1 (done, first try), rechecked after polish. Next: 06.2 app shell.
 - 2026-11-11: Rechecked 07.2: done (title group-hover, keyboard reveal via group-focus-visible). Lesson 07 complete. Next: lesson 08, exercise 08.1 responsive product.
+- 2026-11-11: Checked 08.1: 3 rounds, done (base class = phone layout was the sticking point). Next: 08.2 container queries.
+- 2026-11-11: Checked 08.2: 2 rounds, done. Lesson 08 complete. Next: lesson 09, exercise 09.1 overlay card.
 - 2026-11-11: Checked 07.2: in progress, title group-hover missing; selected state subtle.
 - 2026-11-11: Rechecked 07.1: done (explicit focus rings on every control, file: pill). Next: 07.2 plan picker.
 - 2026-11-10: Checked 07.1: in progress, only the file: button styling left.

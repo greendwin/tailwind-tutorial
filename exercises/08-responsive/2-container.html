@@ -1,43 +1,64 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>08.2 · Container queries</title>
-    <link rel="stylesheet" href="/src/styles.css" />
-  </head>
-  <!--
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>08.2 · Container queries</title>
+  <link rel="stylesheet" href="/src/styles.css" />
+</head>
+<!--
     EXERCISE 08.2: Container-query card (see lessons/08-responsive.md)
     Give BOTH cards the exact same classes. Use @container + @md:/@lg: etc. No sm:/md:/lg:.
     The layout (sidebar + main) is already done for you.
   -->
-  <body class="bg-slate-100 p-6">
-    <div class="flex gap-6">
-      <aside class="w-64 shrink-0">
-        <p class="mb-2 text-xs font-semibold text-slate-500 uppercase">Sidebar (narrow)</p>
-        <!-- CARD (copy 1) -->
-        <article class="overflow-hidden rounded-xl bg-white shadow-sm">
-          <div class="aspect-video bg-linear-to-br from-teal-300 to-cyan-500"></div>
-          <div class="p-4">
-            <h3 class="font-semibold text-slate-900">Weekend in the Alps</h3>
-            <p class="text-sm text-slate-600">Hiking trails, mountain huts and the best cheese fondue you'll ever taste.</p>
-            <p class="mt-2 text-xs text-slate-500">5 min read</p>
-          </div>
-        </article>
-      </aside>
 
-      <main class="min-w-0 flex-1">
-        <p class="mb-2 text-xs font-semibold text-slate-500 uppercase">Main (wide)</p>
-        <!-- CARD (copy 2): must have identical classes to copy 1 -->
-        <article class="overflow-hidden rounded-xl bg-white shadow-sm">
-          <div class="aspect-video bg-linear-to-br from-teal-300 to-cyan-500"></div>
-          <div class="p-4">
-            <h3 class="font-semibold text-slate-900">Weekend in the Alps</h3>
-            <p class="text-sm text-slate-600">Hiking trails, mountain huts and the best cheese fondue you'll ever taste.</p>
-            <p class="mt-2 text-xs text-slate-500">5 min read</p>
-          </div>
-        </article>
-      </main>
-    </div>
-  </body>
+<body class="bg-slate-100 p-6">
+  <div class="flex gap-6">
+    <aside class="w-64 shrink-0 @container">
+      <p class="mb-2 text-xs font-semibold text-slate-500 uppercase">Sidebar (narrow)</p>
+      <!-- CARD (copy 1) -->
+      <article class="
+            overflow-hidden rounded-xl bg-white shadow-sm
+            @sm:flex
+        ">
+        <div class="
+            aspect-video bg-linear-to-br from-teal-300 to-cyan-500
+            @sm:flex-2
+        "></div>
+        <div class="p-4 @sm:flex-3">
+          <h3 class="font-semibold text-slate-900">Weekend in the Alps</h3>
+          <p class="hidden @sm:block text-sm text-slate-600">
+            Hiking trails, mountain huts and the best cheese
+            fondue you'll ever taste.
+          </p>
+          <p class="mt-2 text-xs text-slate-500">5 min read</p>
+        </div>
+      </article>
+    </aside>
+
+    <main class="min-w-0 flex-1 @container">
+      <p class="mb-2 text-xs font-semibold text-slate-500 uppercase">Main (wide)</p>
+      <!-- CARD (copy 2): must have identical classes to copy 1 -->
+      <article class="
+            overflow-hidden rounded-xl bg-white shadow-sm
+            @sm:flex
+        ">
+        <div class="
+            aspect-video bg-linear-to-br from-teal-300 to-cyan-500
+            @sm:flex-2
+        "></div>
+        <div class="p-4 @sm:flex-3">
+          <h3 class="font-semibold text-slate-900">Weekend in the Alps</h3>
+          <p class="hidden @sm:block text-sm text-slate-600">
+            Hiking trails, mountain huts and the best cheese
+            fondue you'll ever taste.
+          </p>
+          <p class="mt-2 text-xs text-slate-500">5 min read</p>
+        </div>
+      </article>
+    </main>
+  </div>
+</body>
+
 </html>
