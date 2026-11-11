@@ -3,3 +3,4 @@
 @source "./2-toggle.html";
 
 /* TODO: make `dark:` react to a `.dark` class instead of the OS setting */
+@custom-variant dark (&:where(.dark, .dark *));

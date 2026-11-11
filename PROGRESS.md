@@ -25,8 +25,8 @@ The dashboard reads the **Status** column. Keep the table format intact.
 | 08.2 | 08-responsive/2-container | done | 2 rounds. @container on wrappers, @sm breakpoint > sidebar. Fixed the collapsing image with @sm:flex-2 / @sm:flex-3 on both copies (identical now). Asked about stretch vs aspect-ratio in the row: explained align-self / cover-image tradeoff. |
 | 09.1 | 09-positioning/1-overlay-card | done | 2 rounds. Avoided the overflow-hidden clipping trap; fixed flat overlay -> gradient, rounded-b-xl, explicit avatar anchoring. |
 | 09.2 | 09-positioning/2-sticky-modal | done | First try. hidden data-open:flex done right. Polished: header z-20 under modal z-50, p-4 gutter on backdrop. |
-| 10.1 | 10-dark-mode/1-profile | todo | |
-| 10.2 | 10-dark-mode/2-toggle | todo | |
+| 10.1 | 10-dark-mode/1-profile | done | All polish applied: elevation fixed, avatar ring in sync, white/10 card edge + dividers, stat labels match subtitle. |
+| 10.2 | 10-dark-mode/2-toggle | done | Theme init in the head (no flash), classList.toggle click handler; reload keeps both choices. Had a missing IIFE call during refactor, found it from a hint. |
 | 11.1 | 11-motion/1-interactions | todo | |
 | 11.2 | 11-motion/2-loading | todo | |
 | 12.1 | 12-customizing/1-brand | todo | |
@@ -44,6 +44,11 @@ The dashboard reads the **Status** column. Keep the table format intact.
 
 <!-- Claude: one line per session, newest first. Date, what was covered, what to pick up next. -->
 - 2026-11-11: Checked 09.2 (done, first try). Rechecked after polish. Lesson 09 complete. Next: lesson 10, exercise 10.1 dark profile.
+- 2026-11-11: Checked 10.1 (done, first try). Rechecked twice; all polish applied. Next: 10.2 theme toggle.
+- 2026-11-12: Checked 10.2 (in progress): script and variant solid; two small fixes left (card border colour, icon order).
+- 2026-11-12: Rechecked 10.2 (done), then again after moving init to the head. Lesson 10 complete. Next: lesson 11, exercise 11.1 micro-interactions (both themes from here on).
+- 2026-11-12: Rechecked 10.2 after classList.toggle refactor: back to in progress (head script not running, reload loses choice).
+- 2026-11-12: Rechecked 10.2: IIFE call fixed, reload verified for dark and light. Done. Lesson 10 complete. Next: 11.1 micro-interactions.
 - 2026-11-11: Checked 09.1: 2 rounds, done (static-position luck vs explicit anchoring was the lesson). Rechecked after polish. Next: 09.2 sticky header & modal.
 - 2026-11-09: Checked 05.1 (done, first try), rechecked after polish. Checked 05.2: 4 rounds, done (min-w-0 chain was the lesson), then polished. Checked 05.3 (done, first try). Lesson 05 complete. Next: lesson 06, exercise 06.1 bento.
 - 2026-11-09: Checked 06.1 (done, first try), rechecked after polish. Next: 06.2 app shell.

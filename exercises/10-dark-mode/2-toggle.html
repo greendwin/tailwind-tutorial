@@ -1,39 +1,79 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>10.2 · Theme toggle</title>
-    <!-- note: this exercise uses its OWN stylesheet -->
-    <link rel="stylesheet" href="./toggle.css" />
-  </head>
-  <!--
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>10.2 · Theme toggle</title>
+  <!-- note: this exercise uses its OWN stylesheet -->
+  <link rel="stylesheet" href="./toggle.css" />
+
+  <script>
+    (function () {
+      const theme = localStorage.getItem("customTheme");
+      if (theme === "dark") {
+        document.documentElement.classList.add("dark");
+      } else if (theme === "light") {
+        // nothing to do
+      } else if (matchMedia("(prefers-color-scheme: dark)").matches) {
+        document.documentElement.classList.add("dark");
+      }
+    })()
+  </script>
+</head>
+<!--
     EXERCISE 10.2: Theme toggle (see lessons/10-dark-mode.md)
     1. toggle.css: add the @custom-variant line
     2. script below: toggle .dark on <html> + remember in localStorage
     3. style both modes   4. icon swap with classes only
   -->
-  <body class="min-h-screen">
-    <header class="flex items-center px-6 py-4">
-      <span class="font-bold">Night Owl</span>
-      <button id="theme" class="ml-auto rounded-full p-2" aria-label="Toggle theme">
-        <span>🌙</span>
-        <span>☀️</span>
-      </button>
-    </header>
 
-    <main class="mx-auto max-w-2xl px-6 py-12">
-      <h1 class="text-4xl font-bold tracking-tight">Reading at night?</h1>
-      <p class="mt-4 text-lg">Hit the button in the corner. Your eyes will thank you, and the page will remember your choice next time.</p>
-      <div class="mt-8 rounded-xl p-6">
-        <p class="font-semibold">A card</p>
-        <p class="mt-1 text-sm">Cards need their own background in both themes.</p>
-      </div>
-    </main>
+<body class="min-h-screen bg-slate-200 dark:bg-slate-950">
+  <header class="flex items-center px-6 py-4">
+    <span class="font-bold text-indigo-800 dark:text-indigo-300">Night Owl</span>
+    <button id="theme" class="
+        ml-auto rounded-full p-2
+        cursor-pointer
+    " aria-label="Toggle theme">
+      <span class="dark:hidden">🌙</span>
+      <span class="hidden dark:inline">☀️</span>
+    </button>
+  </header>
 
-    <script>
-      // TODO: on load, apply the saved theme (fall back to the OS preference)
-      // TODO: on click, toggle `dark` on document.documentElement and save the choice
-    </script>
-  </body>
+  <main class="mx-auto max-w-2xl px-6 py-12">
+    <h1 class="
+        text-4xl font-bold tracking-tight
+        text-indigo-950 dark:text-indigo-100
+    ">Reading at night?</h1>
+    <p class="
+        mt-4 text-lg
+        text-slate-700 dark:text-slate-400
+    ">Hit the button in the corner. Your eyes will thank you, and the page will remember your
+      choice next time.</p>
+    <div class="
+        mt-8 rounded-xl p-6
+        border shadow-lg
+        border-indigo-300 dark:border-white/20 
+        bg-indigo-50 dark:bg-white/10
+    ">
+      <p class="font-semibold text-indigo-900 dark:text-indigo-200">A card</p>
+      <p class="mt-1 text-sm text-slate-700 dark:text-slate-400">Cards need their own background in both themes.</p>
+    </div>
+  </main>
+
+  <script>
+      (function () {
+        const toggleButton = document.getElementById("theme");
+        if (toggleButton == null) {
+          return
+        }
+
+        toggleButton.addEventListener("click", () => {
+          const dark = document.documentElement.classList.toggle("dark");
+          localStorage.setItem("customTheme", dark ? "dark" : "light");
+        })
+      })()
+  </script>
+</body>
+
 </html>
