@@ -3,3 +3,11 @@
 @source "./2-loading.html";
 
 /* TODO: define a custom animation (an --animate-* variable + @keyframes) inside @theme */
+
+@theme {
+    --animate-bell: wiggle 0.4s ease-in-out infinite;
+    @keyframes wiggle {
+        0%,100% { transform: rotate(10deg) translateX(-5px); }
+        50% { transform: rotate(-10deg) translateX(5px); }
+    }    
+}

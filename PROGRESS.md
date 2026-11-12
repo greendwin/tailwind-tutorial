@@ -27,8 +27,8 @@ The dashboard reads the **Status** column. Keep the table format intact.
 | 09.2 | 09-positioning/2-sticky-modal | done | First try. hidden data-open:flex done right. Polished: header z-20 under modal z-50, p-4 gutter on backdrop. |
 | 10.1 | 10-dark-mode/1-profile | done | All polish applied: elevation fixed, avatar ring in sync, white/10 card edge + dividers, stat labels match subtitle. |
 | 10.2 | 10-dark-mode/2-toggle | done | Theme init in the head (no flash), classList.toggle click handler; reload keeps both choices. Had a missing IIFE call during refactor, found it from a hint. |
-| 11.1 | 11-motion/1-interactions | todo | |
-| 11.2 | 11-motion/2-loading | todo | |
+| 11.1 | 11-motion/1-interactions | done | 3 rounds; dark side (switch track contrast, knob colour transition) was the lesson |
+| 11.2 | 11-motion/2-loading | done | 2 rounds. Custom --animate-bell + @keyframes in @theme; motion-safe on every infinite animation (spinner too, own call); dark blocks slate-700. Polished: skeleton bars are just max-w-* (grid stretch fills the width), typo and overflow-hidden gone. |
 | 12.1 | 12-customizing/1-brand | todo | |
 | 12.2 | 12-customizing/2-extras | todo | |
 | 13.1 | 13-reuse/1-components | todo | |
@@ -49,6 +49,13 @@ The dashboard reads the **Status** column. Keep the table format intact.
 - 2026-11-12: Rechecked 10.2 (done), then again after moving init to the head. Lesson 10 complete. Next: lesson 11, exercise 11.1 micro-interactions (both themes from here on).
 - 2026-11-12: Rechecked 10.2 after classList.toggle refactor: back to in progress (head script not running, reload loses choice).
 - 2026-11-12: Rechecked 10.2: IIFE call fixed, reload verified for dark and light. Done. Lesson 10 complete. Next: 11.1 micro-interactions.
+- 2026-11-12: Checked 11.1 (in progress): all six motions correct with the right transition scopes; switch checked colour and dark mode for card/switch/accordion/link left.
+- 2026-11-13: Rechecked 11.1 (in progress): card/accordion dark + switch checked colour fixed; arrow link dark, dark track contrast and knob colour transition left.
+- 2026-11-13: Rechecked 11.1: done (3 rounds). Next: 11.2 loading states.
+- 2026-11-13: Rechecked 11.1 after polish: switch keyboard focus ring via peer-focus-visible added. Still done. Next: 11.2.
+- 2026-11-13: Rechecked 11.2 after polish (stretch + max-w only). Still done. Next: 12.1 brand theme.
+- 2026-11-13: Rechecked 11.2: done (2 rounds). Lesson 11 complete. Next: lesson 12, exercise 12.1 brand theme.
+- 2026-11-13: Checked 11.2 (in progress): animations + custom keyframes right; motion-safe on the other infinite animations and dark skeleton contrast left.
 - 2026-11-11: Checked 09.1: 2 rounds, done (static-position luck vs explicit anchoring was the lesson). Rechecked after polish. Next: 09.2 sticky header & modal.
 - 2026-11-09: Checked 05.1 (done, first try), rechecked after polish. Checked 05.2: 4 rounds, done (min-w-0 chain was the lesson), then polished. Checked 05.3 (done, first try). Lesson 05 complete. Next: lesson 06, exercise 06.1 bento.
 - 2026-11-09: Checked 06.1 (done, first try), rechecked after polish. Next: 06.2 app shell.
