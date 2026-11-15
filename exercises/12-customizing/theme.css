@@ -4,4 +4,46 @@
 
 /* TODO 1-3: @theme with brand colors, --font-display, --radius-card, --shadow-card */
 
+@theme {
+    --radius-card: 0.5rem;
+    --shadow-card: 0 1px 2px rgb(0 0 0 / 0.05), 0 8px 24px -8px rgb(0 0 0 / 0.15);
+
+    --font-display: "Archivo Black", sans-serif;
+
+    --color-brand-50:  oklch(from var(--color-slate-50)  l calc(min(0.3, c * 10)) 145.16);
+    --color-brand-100: oklch(from var(--color-slate-100) l calc(min(0.3, c * 10)) 145.16);
+    --color-brand-200: oklch(from var(--color-slate-200) l calc(min(0.3, c * 10)) 145.16);
+    --color-brand-300: oklch(from var(--color-slate-300) l calc(min(0.3, c * 10)) 145.16);
+    --color-brand-400: oklch(from var(--color-slate-400) l calc(min(0.3, c * 10)) 145.16);
+    --color-brand-500: oklch(from var(--color-slate-500) l calc(min(0.3, c * 10)) 145.16);
+    --color-brand-600: oklch(from var(--color-slate-600) l calc(min(0.3, c * 10)) 145.16);
+    --color-brand-700: oklch(from var(--color-slate-700) l calc(min(0.3, c * 10)) 145.16);
+    --color-brand-800: oklch(from var(--color-slate-800) l calc(min(0.3, c * 10)) 145.16);
+    --color-brand-900: oklch(from var(--color-slate-900) l calc(min(0.3, c * 10)) 145.16);
+    --color-brand-950: oklch(from var(--color-slate-950) l calc(min(0.3, c * 10)) 145.16);
+}
+
 /* TODO 5: @custom-variant dark, @theme inline semantic colors, :root / .dark values */
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+@theme inline {
+    --color-surface: var(--x-surface);
+    --color-fg: var(--x-fg);
+    --color-accent: var(--x-accent);
+    --color-muted: var(--x-muted);
+}
+
+:root {
+    --x-surface: var(--color-red-50);
+    --x-fg: var(--color-red-950);
+    --x-accent: var(--color-brand-600);
+    --x-muted: var(--color-slate-600);
+}
+
+.dark {
+    --x-surface: var(--color-taupe-900);
+    --x-fg: var(--color-taupe-200);
+    --x-accent: var(--color-brand-500);
+    --x-muted: var(--color-taupe-500);
+}

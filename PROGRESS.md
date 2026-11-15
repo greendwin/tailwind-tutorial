@@ -29,7 +29,7 @@ The dashboard reads the **Status** column. Keep the table format intact.
 | 10.2 | 10-dark-mode/2-toggle | done | Theme init in the head (no flash), classList.toggle click handler; reload keeps both choices. Had a missing IIFE call during refactor, found it from a hint. |
 | 11.1 | 11-motion/1-interactions | done | 3 rounds; dark side (switch track contrast, knob colour transition) was the lesson |
 | 11.2 | 11-motion/2-loading | done | 2 rounds. Custom --animate-bell + @keyframes in @theme; motion-safe on every infinite animation (spinner too, own call); dark blocks slate-700. Polished: skeleton bars are just max-w-* (grid stretch fills the width), typo and overflow-hidden gone. |
-| 12.1 | 12-customizing/1-brand | todo | |
+| 12.1 | 12-customizing/1-brand | done | 5 rounds. Brand scale derived from slate lightness via relative oklch (chroma capped). Semantic surface/fg/muted via @theme inline + :root/.dark, toggle with persisted choice. Struggled with: brand text/tints are theme roles; one fixed shade can't serve both surfaces (fixed with dark: per element, then refactored into a semantic accent token). |
 | 12.2 | 12-customizing/2-extras | todo | |
 | 13.1 | 13-reuse/1-components | todo | |
 | 13.2 | 13-reuse/2-dynamic | todo | |
@@ -43,6 +43,12 @@ The dashboard reads the **Status** column. Keep the table format intact.
 ## Session log
 
 <!-- Claude: one line per session, newest first. Date, what was covered, what to pick up next. -->
+- 2026-11-15: Rechecked 12.1 after polish: logo/eyebrow moved to semantic text-accent (:root brand-600 / .dark brand-500), dead text color on emoji tiles removed. Still done.
+- 2026-11-15: Rechecked 12.1: done (round 5). Dark eyebrow 4.6:1, icon tiles deep green in dark. Next: 12.2 or "challenge me: retrofit".
+- 2026-11-15: Rechecked 12.1 (in progress, round 4): gamut cap + dark Start free done; dark eyebrow (3.0:1) and pale icon squares in dark unchanged.
+- 2026-11-15: Rechecked 12.1 (in progress, round 3): light contrast all fixed; dark eyebrow regressed to 3.3:1, icon squares still pale in dark. Named the pattern: brand text/tint are theme roles.
+- 2026-11-15: Rechecked 12.1 (in progress): scale + font fixed; dark eyebrow fixed but light eyebrow and Start free label now low contrast, soft pills bright in dark.
+- 2026-11-15: Checked 12.1 (in progress): token architecture right; brand scale gaps, dark brand contrast and h1 faux bold left.
 - 2026-11-11: Checked 09.2 (done, first try). Rechecked after polish. Lesson 09 complete. Next: lesson 10, exercise 10.1 dark profile.
 - 2026-11-11: Checked 10.1 (done, first try). Rechecked twice; all polish applied. Next: 10.2 theme toggle.
 - 2026-11-12: Checked 10.2 (in progress): script and variant solid; two small fixes left (card border colour, icon order).
