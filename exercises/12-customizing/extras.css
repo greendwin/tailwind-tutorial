@@ -3,9 +3,68 @@
 @source "./2-extras.html";
 
 /* TODO 1: @utility scrollbar-hidden */
+@utility scrollbar-hidden {
+    scrollbar-width: none;
+    &::-webkit-scrollbar {
+        display: none;
+    }
+}
 
 /* TODO 2: a functional @utility that takes a value (--value(...)) */
 
+@utility text-shadow-glow-* {
+    text-shadow: 
+        0 0 calc(--value(number) * 1px) var(--color-sky-200),
+        0 0 calc(--value(number) * 5px) var(--color-slate-900);
+}
+
 /* TODO 3: @custom-variant hocus */
 
+@custom-variant hocus (&:where(:hover, :focus-visible));
+
 /* TODO 4: @plugin "@tailwindcss/typography"; */
+
+@plugin "@tailwindcss/typography";
+
+/* adaptive colors */
+
+@theme inline {
+    --color-surface: var(--x-surface);
+    --color-fg: var(--x-fg);
+    --color-muted: var(--x-muted);
+
+    --color-base-100: var(--x-base-100);
+    --color-base-400: var(--x-base-400);
+    --color-base-500: var(--x-base-500);
+
+    --color-brand-600: var(--x-brand-600);
+    --color-brand-500: var(--x-brand-500);
+}
+
+:root {
+    --x-surface: var(--color-white);
+    --x-fg: var(--color-slate-800);
+    --x-muted: var(--color-slate-500);
+
+    --x-base-100: var(--color-slate-100);
+    --x-base-400: var(--color-slate-400);
+    --x-base-500: var(--color-slate-500);
+
+    --x-brand-600: var(--color-sky-600);
+    --x-brand-500: var(--color-sky-500);
+}
+
+@media (prefers-color-scheme: dark) {
+    :root {
+        --x-surface: var(--color-slate-950);
+        --x-fg: var(--color-slate-200);
+        --x-muted: var(--color-slate-400);
+
+        --x-base-100: var(--color-slate-800);
+        --x-base-400: var(--color-slate-500);
+        --x-base-500: var(--color-slate-400);
+
+        --x-brand-600: var(--color-sky-500);
+        --x-brand-500: var(--color-sky-600);
+    }
+}
