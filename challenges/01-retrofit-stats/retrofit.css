@@ -1,0 +1,15 @@
+/* Stylesheet for the retrofit challenge only. */
+@import "tailwindcss" source(none);
+@source "./mine.html";
+
+/* Dark mode here follows the OS (Tailwind's default `dark:` = prefers-color-scheme).
+   No toggle needed: flip your OS theme, or DevTools → Rendering → "Emulate CSS prefers-color-scheme". */
+
+/* TODO 1: expose semantic colors as utilities with @theme inline.
+   Name them by ROLE, not by color: think surface (page), card / raised surface,
+   fg (main text), muted (secondary text), border/ring... whatever 04.2 actually needs.
+   Each one points at a variable you define below, e.g. --color-xxx: var(--xxx); */
+
+/* TODO 2: light values on :root (pick them from what 04.2 uses today) */
+
+/* TODO 3: dark values for the same variables, inside @media (prefers-color-scheme: dark) */

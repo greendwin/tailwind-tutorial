@@ -39,10 +39,12 @@ The dashboard reads the **Status** column. Keep the table format intact.
 
 | Challenge | Status | Notes |
 | --- | --- | --- |
+| 01-retrofit-stats | todo | Retrofit 04.2 stat cards to both themes with semantic tokens (OS dark strategy). |
 
 ## Session log
 
 <!-- Claude: one line per session, newest first. Date, what was covered, what to pick up next. -->
+- 2026-11-21: Created retrofit challenge 01 (04.2 stat cards → both themes via semantic tokens). Next: do it, then 14.1 capstone.
 - 2026-11-21: Rechecked 13.2 after polish: still done. Solid accent fill in light is right, but white/80 text is still ~2.3:1; dark text suggested. Next: 14.1 capstone.
 - 2026-11-21: Rechecked 13.2: done (2 rounds). Map + dark variants + root cause in. Custom-pill light contrast left as polish. Lesson 13 complete. Next: 14.1 capstone.
 - 2026-11-20: Checked 13.2 (in progress, code + served CSS): fix is correct, all classes generated. Dark variants, light-theme custom pill contrast, and root-cause sentence left.
