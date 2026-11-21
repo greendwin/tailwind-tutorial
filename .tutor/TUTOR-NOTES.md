@@ -141,7 +141,7 @@
 ## 13.2 · Dynamic classes
 - **Root cause (learner must articulate):** Tailwind scans source text; `bg-${color}-100` never appears as a complete class, so no CSS is generated.
 - **Must:** a map like `{ emerald: "bg-emerald-100 text-emerald-800 ring-emerald-600/20", ... }`; custom pill uses `style="--pill: #ff6b35"` + `bg-(--pill)/15 text-(--pill) ring-(--pill)/30` or similar (opacity modifiers on vars work in v4 via color-mix).
-- **Both themes (Must):** pill map has dark variants (`dark:bg-emerald-400/10 dark:text-emerald-300 dark:ring-emerald-400/20`…). The custom `--pill` version with `/15` bg + `/30` ring tends to work in both themes for free, worth pointing out.
+- **Both themes (Must):** pill map has dark variants (`dark:bg-emerald-400/10 dark:text-emerald-300 dark:ring-emerald-400/20`…). The custom `--pill` version with `/15` bg + `/30` ring works in dark, but a bright hex like `#ff6b35` as *text* on a light bg is only ~2.6:1 whatever the tint. In light, use the hex as a solid bg with dark text (or darken it with `color-mix`). Don't tell the learner the text must stay the hex.
 - **Common mistakes:** "fixing" with `@source inline(...)` or safelisting (explicitly disallowed); inline `style="background: ..."` with no Tailwind (acceptable fallback but steer toward the CSS-variable pattern).
 
 ## 14.1 · Capstone

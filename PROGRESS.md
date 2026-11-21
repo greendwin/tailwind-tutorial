@@ -32,7 +32,7 @@ The dashboard reads the **Status** column. Keep the table format intact.
 | 12.1 | 12-customizing/1-brand | done | 5 rounds. Brand scale derived from slate lightness via relative oklch (chroma capped). Semantic surface/fg/muted via @theme inline + :root/.dark, toggle with persisted choice. Struggled with: brand text/tints are theme roles; one fixed shade can't serve both surfaces (fixed with dark: per element, then refactored into a semantic accent token). |
 | 12.2 | 12-customizing/2-extras | done | All 4 pieces work, both themes via semantic tokens (only dark: is prose-invert). Explanation half right: "new concept" = @utility, but put UI-kit presets in @utility and token variants in templates. Clarified: @theme for tokens, @utility for single-purpose CSS, components for multi-element bundles. 13.1 should reinforce this. |
 | 13.1 | 13-reuse/1-components | done | 2 rounds. Sold-out = disabled secondary; dark: inside badge tones + explicit disabled: colors per variant; template literals; card dims in dark via before: overlay. Both polish items applied (dark:before: order, before:rounded-[inherit]). |
-| 13.2 | 13-reuse/2-dynamic | todo | |
+| 13.2 | 13-reuse/2-dynamic | done | 2 rounds. Root cause stated correctly (scanner reads text, never runs JS). Color-keyed map with dark: inside, --accent pill. Polish round: join(" ") fixed; custom pill light now solid bg-(--accent) but with text-white/80 (~2.3:1, white can't pass on this orange; dark text would be ~6:1). |
 | 14.1 | 14-capstone/1-landing | todo | |
 
 ## Challenges
@@ -43,6 +43,9 @@ The dashboard reads the **Status** column. Keep the table format intact.
 ## Session log
 
 <!-- Claude: one line per session, newest first. Date, what was covered, what to pick up next. -->
+- 2026-11-21: Rechecked 13.2 after polish: still done. Solid accent fill in light is right, but white/80 text is still ~2.3:1; dark text suggested. Next: 14.1 capstone.
+- 2026-11-21: Rechecked 13.2: done (2 rounds). Map + dark variants + root cause in. Custom-pill light contrast left as polish. Lesson 13 complete. Next: 14.1 capstone.
+- 2026-11-20: Checked 13.2 (in progress, code + served CSS): fix is correct, all classes generated. Dark variants, light-theme custom pill contrast, and root-cause sentence left.
 - 2026-11-20: Rechecked 13.1 after polish: dark:before: order + rounded-[inherit] overlay. Still done. Next: 13.2.
 - 2026-11-20: Rechecked 13.1: done (2 rounds). Both fixes in, plus per-variant disabled colors. Next: 13.2 dynamic classes.
 - 2026-11-20: Checked 13.1 (in progress, code-only review): component maps solid; sold-out button variant (secondary) and badge dark tones left.
