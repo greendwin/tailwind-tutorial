@@ -6,6 +6,19 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>14.1 · Capstone</title>
   <link rel="stylesheet" href="./capstone.css" />
+
+  <script>
+    (function () {
+      const theme = localStorage.getItem("customTheme");
+      if (theme === "dark") {
+        document.documentElement.classList.add("dark");
+      } else if (theme === "light") {
+        // nothing to do
+      } else if (matchMedia("(prefers-color-scheme: dark)").matches) {
+        document.documentElement.classList.add("dark");
+      }
+    })()
+  </script>
 </head>
 <!--
     EXERCISE 14.1: Capstone landing page (see lessons/14-capstone.md)
@@ -18,23 +31,58 @@
   flex  flex-col 
   *:not-last:border-b 
   *:not-last:border-white/20
-  *:odd:bg-surface-even
 ">
-  <nav class="
-      p-4 flex items-center gap-4
-  ">
-    <div>
-      <svg class="size-8">
-        <use href="svg/logo.svg#logo"></use>
-      </svg>
-      Tempo
+  <nav class="px-4">
+    <div class="
+        max-w-5xl mx-auto py-3
+        flex items-center justify-between
+        *:flex *:items-center
+    ">
+      <div class="gap-2">
+        <svg class="size-7 bg-brand-600 rounded-lg">
+          <use href="svg/logo.svg" />
+        </svg>
+        <span class="font-bold text-shadow-2xs text-shadow-fg">Tempo</span>
+      </div>
+      <div class="
+          gap-6
+          *:text-muted *:text-sm *:font-semibold
+          *:hover:text-shadow-sm
+          *:text-shadow-fg/20
+      ">
+        <a href="#">Features</a>
+        <a href="#">Pricing</a>
+        <a href="#">Customers</a>
+        <a href="#">FAQ</a>
+      </div>
+      <div class="gap-4">
+        <button id="theme" class="
+            size-8 p-1
+            border rounded-lg border-fg/20
+            fill-muted
+            flex items-center justify-center
+            hover:fill-brand-400 hover:bg-fg/5 active:bg-fg/10
+            transition cursor-pointer
+            *:w-full *:h-full
+        ">
+          <svg class="hidden dark:block size-5">
+            <use href="svg/icons/moon.svg"></use>
+          </svg>
+          <svg class="dark:hidden size-5">
+            <use href="svg/icons/sun.svg"></use>
+          </svg>
+        </button>
+        <button class="
+            px-4 py-2
+            border border-brand-800 rounded-lg
+            bg-brand-600 text-sm font-semibold
+            hover:bg-brand-600/80
+            active:scale-98 transition cursor-pointer
+        ">
+          Start free
+        </button>
+      </div>
     </div>
-    <div>Features</div>
-    <div>Pricing</div>
-    <div>Customers</div>
-    <div>FAQ</div>
-    <div>Theme</div>
-    <button>Start free</button>
   </nav>
 
   <section class="
@@ -227,6 +275,20 @@
   <footer>
     <p>(c) 2026 Tempo Labs. All rights reserved.</p>
   </footer>
+
+  <script>
+      (function () {
+        const toggleButton = document.getElementById("theme");
+        if (toggleButton == null) {
+          return
+        }
+
+        toggleButton.addEventListener("click", () => {
+          const dark = document.documentElement.classList.toggle("dark");
+          localStorage.setItem("customTheme", dark ? "dark" : "light");
+        })
+      })()
+  </script>
 </body>
 
 </html>
