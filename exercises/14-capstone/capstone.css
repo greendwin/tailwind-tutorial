@@ -1,3 +1,23 @@
 /* Stylesheet for the capstone. Theme it however you like. */
 @import "tailwindcss" source(none);
 @source "./";
+
+@theme inline {
+    --color-surface: var(--x-surface);
+    --color-surface-even: var(--x-surface-even);
+    --color-fg: var(--x-fg);
+}
+
+:root {
+    --x-surface: var(--color-slate-200);
+    --x-surface-even: var(--color-slate-300);
+    --x-fg: var(--color-slate-900);
+}
+
+@media (prefers-color-scheme: dark) {
+    :root {
+        --x-surface: var(--color-slate-950);
+        --x-surface-even: var(--color-slate-900);
+        --x-fg: var(--color-slate-200);
+    }
+}

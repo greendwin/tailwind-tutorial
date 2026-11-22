@@ -1,30 +1,232 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>14.1 · Capstone</title>
-    <link rel="stylesheet" href="./capstone.css" />
-  </head>
-  <!--
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>14.1 · Capstone</title>
+  <link rel="stylesheet" href="./capstone.css" />
+</head>
+<!--
     EXERCISE 14.1: Capstone landing page (see lessons/14-capstone.md)
     Blank canvas. Read the brief, sketch, then build section by section.
   -->
-  <body>
-    <!-- 1. Navbar -->
 
-    <!-- 2. Hero -->
+<body class="
+  min-h-dvh
+  bg-surface text-fg
+  flex  flex-col 
+  *:not-last:border-b 
+  *:not-last:border-white/20
+  *:odd:bg-surface-even
+">
+  <nav class="
+      p-4 flex items-center gap-4
+  ">
+    <div>
+      <svg class="size-8">
+        <use href="svg/logo.svg#logo"></use>
+      </svg>
+      Tempo
+    </div>
+    <div>Features</div>
+    <div>Pricing</div>
+    <div>Customers</div>
+    <div>FAQ</div>
+    <div>Theme</div>
+    <button>Start free</button>
+  </nav>
 
-    <!-- 3. Logo cloud / social proof -->
+  <section class="
+      min-h-dvh
+      bg-radial-[circle_40dvw_at_50%_25%]
+      to-surface
+      via-indigo-950/50
+      from-indigo-950/80
+      flex *:flex-1
+  ">
+    <div>
+      <div class="border">New: weekly focus reports</div>
+      <h1>Plan less.</h1>
+      <h1>Focus more.</h1>
+      <p>Tempo turns your to-do list into focused time blocks, protects them from meetings, and tells you honestly where
+        your week went.</p>
+      <button>Start free trial</button>
+      <button>Watch demo</button>
+      <p>No credit card</p>
+      <p>Cancel anytime</p>
+    </div>
+    <div class="aspect-video border">
+    </div>
+  </section>
 
-    <!-- 4. Features -->
+  <section class="min-h-40">
+    <p>Trusted by 12,000+ focused teams</p>
+    <div class="flex">
+      <p>Northwind</p>
+      <p>Lumen</p>
+      <p>Orbit</p>
+      <p>Kestrel</p>
+      <p>Halcyon</p>
+      <p>Fieldnote</p>
+    </div>
+  </section>
 
-    <!-- 5. Pricing -->
+  <section class="min-h-dvh">
+    <p>Features</p>
+    <h2>Everything you need to own your calendar</h2>
+    <div class="
+        grid grid-cols-3
+        *:border *:p-4
+    ">
+      <div>
+        <div class="size-10 border"></div>
+        <h3>Auto time-blocking</h3>
+        <p>Drag tasks onto your day. Tempo finds the gaps and books them.</p>
+      </div>
+      <div>
+        <div class="size-10 border"></div>
+        <h3>Meeting shield</h3>
+        <p>Focus blocks show as busy, so nobody books over your deep work.</p>
+      </div>
+      <div>
+        <div class="size-10 border"></div>
+        <h3>Honest reports</h3>
+        <p>See planned vs. actual time every Friday, no guild trip included.</p>
+      </div>
+      <div>
+        <div class="size-10 border"></div>
+        <h3>Two-way sync</h3>
+        <p>Google, Outlook and iCloud calendars stay in step, instantly.</p>
+      </div>
+      <div>
+        <div class="size-10 border"></div>
+        <h3>Focus sounds</h3>
+        <p>Built-in lo-fi, rain and brown noise start with every block.</p>
+      </div>
+      <div>
+        <div class="size-10 border"></div>
+        <h3>Keyboard first</h3>
+        <p>Every action is one shortcut away. Your mouse can take a nap.</p>
+      </div>
+    </div>
+  </section>
 
-    <!-- 6. Testimonials -->
+  <section class="min-h-dvh">
+    <h2>Simple pricing</h2>
+    <div>
+      <span>Monthly</span>
+      <span>Yearly -20%</span>
+    </div>
+    <div>
+      <h4>Solo</h4>
+      <div><span>$0</span> <span>/mo</span></div>
+      <p>For trying things out.</p>
+      <ul>
+        <li>1 calendar</li>
+        <li>Time-blocking</li>
+        <li>Reports</li>
+      </ul>
+      <button>Get started</button>
+    </div>
+    <div>
+      <div>Most popular</div>
+      <h4>Pro</h4>
+      <div><span>$8</span> <span>/mo</span></div>
+      <p>For people who live in their calendar.</p>
+      <ul>
+        <li>Unlimited calendars</li>
+        <li>Meeting shield</li>
+        <li>Weekly reports</li>
+      </ul>
+      <button>Start 14-day trial</button>
+    </div>
+    <div>
+      <h4>Team</h4>
+      <div><span>$14</span> <span>/user/mo</span></div>
+      <p>Shared focus hours for teams.</p>
+      <ul>
+        <li>Everything in Pro</li>
+        <li>Team no-meeting day</li>
+        <li>Admin & SSO</li>
+      </ul>
+      <button>Contact sales</button>
+    </div>
+  </section>
 
-    <!-- 7. FAQ -->
+  <section class="min-h-dvh">
+    <h2>Loved by busy people</h2>
+    <div>
+      <p>"I got my mornings back. Tempo is the first planner I've stuck with for more than a week."</p>
+      <div class="size-8 border">AM</div>
+      <h4>Ana Morales</h4>
+      <p>Product lead, Lumen</p>
+    </div>
+    <div>
+      <p>"Meeting shield alone is worth it. My team finally has real no-meeting Wednesdays."</p>
+      <div class="size-8 border">KO</div>
+      <h4>Kofi Owusu</h4>
+      <p>CTO, Orbit</p>
+    </div>
+    <div>
+      <p>"The Friday report is brutally honest, and that's exactly why I love it."</p>
+      <div class="size-8 border">LH</div>
+      <h4>Lena Hart</h4>
+      <p>Freelance writer</p>
+    </div>
 
-    <!-- 8. Footer -->
-  </body>
+    <h2>Questions?</h4>
+      <div>
+        <h4>Is there free plan?</h4>
+        <p>Yes. Solo is free forever with one calendar. Upgrade whenever you need more.</p>
+      </div>
+      <div>
+        <h4>Which calendars do you support?</h4>
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Iste ea facilis fuga. Vero suscipit voluptates
+          exercitationem atque ad eveniet modi, maiores, quia labore neque, minima explicabo aliquam pariatur assumenda
+          esse?</p>
+      </div>
+      <div>
+        <h4>Can I cancel any time?</h4>
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Iste ea facilis fuga. Vero suscipit voluptates
+          exercitationem atque ad eveniet modi, maiores, quia labore neque, minima explicabo aliquam pariatur assumenda
+          esse?</p>
+      </div>
+      <div>
+        <h4>Is my data private?</h4>
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Iste ea facilis fuga. Vero suscipit voluptates
+          exercitationem atque ad eveniet modi, maiores, quia labore neque, minima explicabo aliquam pariatur assumenda
+          esse?</p>
+      </div>
+  </section>
+
+  <footer>
+    <div>
+      <h4>Tempo</h4>
+      <p>Focused time, protected. Made by a small team who hate pointless meetings.</p>
+    </div>
+    <div>
+      <h5>Product</h5>
+      <p>Features</p>
+      <p>Pricing</p>
+      <p>Changelog</p>
+    </div>
+    <div>
+      <h5>Company</h5>
+      <p>About</p>
+      <p>Careers</p>
+      <p>Blog</p>
+    </div>
+    <div>
+      <h5>Legal</h5>
+      <p>Privacy</p>
+      <p>Terms</p>
+      <p>Cookies</p>
+    </div>
+  </footer>
+  <footer>
+    <p>(c) 2026 Tempo Labs. All rights reserved.</p>
+  </footer>
+</body>
+
 </html>
