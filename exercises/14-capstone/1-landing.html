@@ -29,12 +29,12 @@
   min-h-dvh
   bg-surface text-fg
   flex  flex-col 
-  *:not-last:border-b 
-  *:not-last:border-white/20
+  *:px-6 *:not-last:border-b 
+  *:not-last:border-white/10
 ">
-  <nav class="px-4">
+  <nav>
     <div class="
-        max-w-5xl mx-auto py-3
+        max-w-page mx-auto py-3
         flex items-center justify-between
         *:flex *:items-center
     ">
@@ -57,18 +57,17 @@
       </div>
       <div class="gap-4">
         <button id="theme" class="
-            size-8 p-1
+            size-8
             border rounded-lg border-fg/20
             fill-muted
             flex items-center justify-center
             hover:fill-brand-400 hover:bg-fg/5 active:bg-fg/10
             transition cursor-pointer
-            *:w-full *:h-full
         ">
-          <svg class="hidden dark:block size-5">
+          <svg class="hidden dark:block size-4.5">
             <use href="svg/icons/moon.svg"></use>
           </svg>
-          <svg class="dark:hidden size-5">
+          <svg class="dark:hidden size-4.5">
             <use href="svg/icons/sun.svg"></use>
           </svg>
         </button>
@@ -86,37 +85,199 @@
   </nav>
 
   <section class="
-      min-h-dvh
+      min-h-dvh flex
       bg-radial-[circle_40dvw_at_50%_25%]
-      to-surface
-      via-indigo-950/50
-      from-indigo-950/80
-      flex *:flex-1
+      from-indigo-950/80 via-indigo-950/50 to-surface
   ">
-    <div>
-      <div class="border">New: weekly focus reports</div>
-      <h1>Plan less.</h1>
-      <h1>Focus more.</h1>
-      <p>Tempo turns your to-do list into focused time blocks, protects them from meetings, and tells you honestly where
-        your week went.</p>
-      <button>Start free trial</button>
-      <button>Watch demo</button>
-      <p>No credit card</p>
-      <p>Cancel anytime</p>
-    </div>
-    <div class="aspect-video border">
+    <div class="
+        w-full max-w-page mx-auto
+        flex items-center *:flex-1 gap-6
+    ">
+      <div class="
+          flex flex-col items-start gap-8
+      ">
+        <div class="
+            px-3 py-1 rounded-full
+            flex items-center
+            bg-white/5 text-brand-300
+            border border-white/10
+            text-xs tracking-wider
+        ">
+          <svg class="-ml-1 mr-1 size-4">
+            <use href="svg/icons/sparkle.svg"></use>
+          </svg>
+          New: weekly focus reports
+        </div>
+        <h1 class="
+            text-5xl font-bold
+        ">
+          Plan less.<br />
+          <span class="
+              bg-linear-to-r
+              from-brand-500 to-pink-500
+              bg-clip-text
+              text-transparent
+          ">
+            Focus more.
+          </span>
+        </h1>
+        <p class="
+            text-muted
+        ">
+          Tempo turns your to-do list into focused time blocks, protects them from meetings, and tells you honestly
+          where your week went.
+        </p>
+        <div class="
+            flex gap-4
+            *:px-4 *:py-2
+            *:border *:rounded-lg
+            *:font-semibold
+            *:active:scale-98 *:transition *:cursor-pointer
+        ">
+          <button class="
+              border-brand-800 bg-brand-600 
+              hover:bg-brand-600/80
+          ">
+            Start free trial
+          </button>
+          <button class="
+              border-white/10 bg-white/5
+              hover:bg-white/3
+              flex items-center gap-2
+          ">
+            <svg class="
+                inline-block size-4
+                rounded-xs
+                bg-sky-500
+                border border-sky-600
+            ">
+              <use href="svg/icons/play.svg"></use>
+            </svg>
+            Watch demo
+          </button>
+        </div>
+        <p class="
+            text-xs text-muted
+            font-semibold tracking-wide
+        ">
+          No credit card • Cancel anytime
+        </p>
+      </div>
+      <div class="
+          p-4 border rounded-2xl space-y-3
+          border-white/5
+          bg-linear-to-br
+          from-slate-900
+          via-slate-900
+          to-slate-900
+      ">
+        <div class="
+            ml-1 -mt-1 flex items-center gap-1.5
+            *:size-3.5
+            *:rounded-full
+            *:inset-shadow-xs
+            *:inset-shadow-white/20
+        ">
+          <span class="bg-red-500"></span>
+          <span class="bg-yellow-500"></span>
+          <span class="bg-green-500"></span>
+        </div>
+        <div class="
+            w-full
+            p-4 rounded-lg
+            bg-slate-950
+            flex gap-3
+        ">
+          <ul class="
+              flex-1
+              space-y-2
+              text-xs
+              *:px-3 *:py-2
+              *:font-semibold *:tracking-wide
+              *:rounded-lg
+          ">
+            <li class="text-brand-300 bg-indigo-950/80">Today</li>
+            <li class="text-muted">This week</li>
+            <li class="text-muted">Projects</li>
+            <li class="text-muted">Reports</li>
+          </ul>
+          <div class="flex-3 space-y-3">
+            <div class="text-muted text-xs font-semibold flex justify-between">
+              <p>Tue 24 Nov</p>
+              <p>5h 50m planned</p>
+            </div>
+            <ul class="
+                flex flex-col gap-2
+                [&_h4]:font-bold
+                [&_p]:text-muted
+                [&_p]:text-sm
+                [&_p]:tracking-wide
+                [&_p_span]:text-xs
+            ">
+              <li class="rounded-lg bg-indigo-600">
+                <div class="ml-1.25 rounded-md bg-black/80 px-4 py-2">
+                  <h4>Write Q4 report</h4>
+                  <p>09:00 - 10:30 • <span>deep work</span></p>
+                </div>
+              </li>
+              <li class="rounded-lg bg-pink-600">
+                <div class="ml-1.25 rounded-md bg-black/80 px-4 py-2">
+                  <h4>Design review</h4>
+                  <p>11:00 - 11:45 • <span>meeting</span></p>
+                </div>
+              </li>
+              <li class="rounded-lg bg-emerald-600">
+                <div class="ml-1.25 rounded-md bg-black/80 px-4 py-2">
+                  <h4>Inbox zero</h4>
+                  <p>13:00 - 13:30 • <span>shallow</span></p>
+                </div>
+              </li>
+              <li class="
+                  py-3 flex items-center justify-center
+                  border border-dashed rounded-lg
+                  border-white/20
+                  text-sm text-muted font-semibold
+              ">
+                + Drop a task here
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
     </div>
   </section>
 
-  <section class="min-h-40">
-    <p>Trusted by 12,000+ focused teams</p>
-    <div class="flex">
-      <p>Northwind</p>
-      <p>Lumen</p>
-      <p>Orbit</p>
-      <p>Kestrel</p>
-      <p>Halcyon</p>
-      <p>Fieldnote</p>
+  <section class="
+      min-h-40 bg-surface-alt flex
+  ">
+    <div class="
+        w-full max-w-page mx-auto
+        flex flex-col items-center justify-center
+    ">
+      <p class="mb-6 text-muted text-sm font-semibold tracking-wide">Trusted by 12,000+ focused teams</p>
+      <div class="
+          w-full text-muted text-xl flex justify-between
+          *:h-7
+      ">
+        <svg>
+          <use href="svg/logos/northwind.svg"></use>
+        </svg>
+        <svg>
+          <use href="svg/logos/lumen.svg"></use>
+        </svg>
+        <svg>
+          <use href="svg/logos/orbit.svg"></use>
+        </svg>
+        <svg>
+          <use href="svg/logos/kestrel.svg"></use>
+        </svg>
+        <svg>
+          <use href="svg/logos/halcyon.svg"></use>
+        </svg>
+        <svg>
+          <use href="svg/logos/fieldnote.svg"></use>
+        </svg>
+      </div>
     </div>
   </section>
 

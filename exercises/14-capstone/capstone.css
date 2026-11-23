@@ -19,6 +19,8 @@
     --color-surface-alt: var(--x-surface-alt);
     --color-fg: var(--x-fg);
     --color-muted: var(--x-muted);
+
+    --container-page: 74rem;
 }
 
 :root {
