@@ -29,8 +29,10 @@
   min-h-dvh
   bg-surface text-fg
   flex  flex-col 
-  *:px-6 *:not-last:border-b 
-  *:not-last:border-fg/10
+  *:px-6
+  [&>:is(nav,section)]:border-b 
+  [&>footer]:not-last:border-b 
+  *:border-fg/10
 ">
   <nav>
     <div class="
@@ -297,7 +299,7 @@
       <p class="mb-4 uppercase font-bold text-brand-400">
         Features
       </p>
-      <h2 class="mb-12 text-4xl font-bold">
+      <h2 class="mb-12 text-4xl font-bold text-center">
         Everything you need<br />to own your calendar
       </h2>
       <div class="
@@ -396,18 +398,20 @@
           [&_button]:px-6
           [&_button]:py-3
           [&_button]:border
-          [&_button]:border-fg/20 
           [&_button]:rounded-lg
           [&_button]:font-bold
           [&_button]:cursor-pointer
           [&_button]:transition
-          [&_button]:hover:bg-fg/3
           [&_button]:active:scale-98
+
+          [&_button:not(.primary)]:border-fg/20 
+          [&_button:not(.primary)]:hover:bg-fg/3
 
           [&_button.primary]:border-surface/50
           [&_button.primary]:bg-fg
-          [&_button.primary]:hover:bg-brand-200/95
           [&_button.primary]:text-brand-600
+          [&_button.primary]:hover:bg-fg/90
+          [&_button.primary]:hover:text-brand-700
       ">
         <div class="
             p-8 border rounded-xl
@@ -622,8 +626,8 @@
         </div>
       </div>
 
-      <h2 class="mt-20 mb-12 text-4xl font-bold">Questions?</h4>
-        <div class="
+      <h2 class="mt-20 mb-12 text-4xl font-bold">Questions?</h2>
+      <div class="
             w-full max-w-2xl
             border rounded-2xl
             border-fg/20
@@ -645,49 +649,49 @@
             [&_p]:text-sm 
             [&_p]:text-muted
         ">
-          <details open class="group">
-            <summary class="group/summary">
-              Is there free plan?
-              <svg>
-                <use href="svg/icons/chevron-down.svg"></use>
-              </svg>
-            </summary>
-            <p>Yes. Solo is free forever with one calendar. Upgrade whenever you need more.</p>
-          </details>
-          <details class="group">
-            <summary class="group/summary">
-              Which calendars do you support?
-              <svg>
-                <use href="svg/icons/chevron-down.svg"></use>
-              </svg>
-            </summary>
-            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Iste ea facilis fuga. Vero suscipit voluptates
-              exercitationem atque ad eveniet modi, maiores, quia labore neque, minima explicabo aliquam pariatur
-              assumenda esse?</p>
-          </details>
-          <details class="group">
-            <summary class="group/summary">
-              Can I cancel any time?
-              <svg>
-                <use href="svg/icons/chevron-down.svg"></use>
-              </svg>
-            </summary>
-            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Iste ea facilis fuga. Vero suscipit voluptates
-              exercitationem atque ad eveniet modi, maiores, quia labore neque, minima explicabo aliquam pariatur
-              assumenda esse?</p>
-          </details>
-          <details class="group">
-            <summary class="group/summary">
-              Is my data private?
-              <svg>
-                <use href="svg/icons/chevron-down.svg"></use>
-              </svg>
-            </summary>
-            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Iste ea facilis fuga. Vero suscipit voluptates
-              exercitationem atque ad eveniet modi, maiores, quia labore neque, minima explicabo aliquam pariatur
-              assumenda esse?</p>
-          </details>
-        </div>
+        <details open class="group">
+          <summary class="group/summary">
+            Is there free plan?
+            <svg>
+              <use href="svg/icons/chevron-down.svg"></use>
+            </svg>
+          </summary>
+          <p>Yes. Solo is free forever with one calendar. Upgrade whenever you need more.</p>
+        </details>
+        <details class="group">
+          <summary class="group/summary">
+            Which calendars do you support?
+            <svg>
+              <use href="svg/icons/chevron-down.svg"></use>
+            </svg>
+          </summary>
+          <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Iste ea facilis fuga. Vero suscipit voluptates
+            exercitationem atque ad eveniet modi, maiores, quia labore neque, minima explicabo aliquam pariatur
+            assumenda esse?</p>
+        </details>
+        <details class="group">
+          <summary class="group/summary">
+            Can I cancel any time?
+            <svg>
+              <use href="svg/icons/chevron-down.svg"></use>
+            </svg>
+          </summary>
+          <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Iste ea facilis fuga. Vero suscipit voluptates
+            exercitationem atque ad eveniet modi, maiores, quia labore neque, minima explicabo aliquam pariatur
+            assumenda esse?</p>
+        </details>
+        <details class="group">
+          <summary class="group/summary">
+            Is my data private?
+            <svg>
+              <use href="svg/icons/chevron-down.svg"></use>
+            </svg>
+          </summary>
+          <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Iste ea facilis fuga. Vero suscipit voluptates
+            exercitationem atque ad eveniet modi, maiores, quia labore neque, minima explicabo aliquam pariatur
+            assumenda esse?</p>
+        </details>
+      </div>
     </div>
   </section>
 
