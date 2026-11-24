@@ -549,50 +549,146 @@
 
   <!-- USERS REVIEW -->
 
-  <section class="min-h-dvh">
-    <h2>Loved by busy people</h2>
-    <div>
-      <p>"I got my mornings back. Tempo is the first planner I've stuck with for more than a week."</p>
-      <div class="size-8 border">AM</div>
-      <h4>Ana Morales</h4>
-      <p>Product lead, Lumen</p>
-    </div>
-    <div>
-      <p>"Meeting shield alone is worth it. My team finally has real no-meeting Wednesdays."</p>
-      <div class="size-8 border">KO</div>
-      <h4>Kofi Owusu</h4>
-      <p>CTO, Orbit</p>
-    </div>
-    <div>
-      <p>"The Friday report is brutally honest, and that's exactly why I love it."</p>
-      <div class="size-8 border">LH</div>
-      <h4>Lena Hart</h4>
-      <p>Freelance writer</p>
-    </div>
+  <section class="min-h-dvh flex py-24">
+    <div class="
+        w-full max-w-page mx-auto
+        flex flex-col items-center
+    ">
+      <h2 class="mb-12 text-4xl font-bold">Loved by busy people</h2>
+      <div class="
+          grid grid-cols-3 gap-12
+          *:p-6 *:rounded-xl
+          *:border *:border-fg/20
+      ">
+        <div class="space-y-6">
+          <p class="text-muted">
+            "I got my mornings back. Tempo is the first planner I've stuck with for more than a week."
+          </p>
+          <div class="flex items-center gap-4">
+            <div class="
+                size-10 rounded-full
+                bg-linear-to-br
+                from-purple-500 to-pink-400
+                flex items-center justify-center
+                font-bold
+            ">
+              AM
+            </div>
+            <div>
+              <h4 class="mb-1 font-bold">Ana Morales</h4>
+              <p class="text-sm text-muted">Product lead, Lumen</p>
+            </div>
+          </div>
+        </div>
+        <div class="space-y-6">
+          <p class="text-muted">
+            "Meeting shield alone is worth it. My team finally has real no-meeting Wednesdays."
+          </p>
+          <div class="flex items-center gap-4">
+            <div class="
+                size-10 rounded-full
+                bg-linear-to-br
+                from-purple-500 to-pink-400
+                flex items-center justify-center
+                font-bold
+            ">
+              KO
+            </div>
+            <div>
+              <h4 class="mb-1 font-bold">Kofi Owusu</h4>
+              <p class="text-sm text-muted">CTO, Orbit</p>
+            </div>
+          </div>
+        </div>
+        <div class="space-y-6">
+          <p class="text-muted">
+            "The Friday report is brutally honest, and that's exactly why I love it."
+          </p>
+          <div class="flex items-center gap-4">
+            <div class="
+                size-10 rounded-full
+                bg-linear-to-br
+                from-purple-500 to-pink-400
+                flex items-center justify-center
+                font-bold
+            ">
+              LH
+            </div>
+            <div>
+              <h4 class="mb-1 font-bold">Lena Hart</h4>
+              <p class="text-sm text-muted">Freelance writer</p>
+            </div>
+          </div>
+        </div>
+      </div>
 
-    <h2>Questions?</h4>
-      <div>
-        <h4>Is there free plan?</h4>
-        <p>Yes. Solo is free forever with one calendar. Upgrade whenever you need more.</p>
-      </div>
-      <div>
-        <h4>Which calendars do you support?</h4>
-        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Iste ea facilis fuga. Vero suscipit voluptates
-          exercitationem atque ad eveniet modi, maiores, quia labore neque, minima explicabo aliquam pariatur assumenda
-          esse?</p>
-      </div>
-      <div>
-        <h4>Can I cancel any time?</h4>
-        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Iste ea facilis fuga. Vero suscipit voluptates
-          exercitationem atque ad eveniet modi, maiores, quia labore neque, minima explicabo aliquam pariatur assumenda
-          esse?</p>
-      </div>
-      <div>
-        <h4>Is my data private?</h4>
-        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Iste ea facilis fuga. Vero suscipit voluptates
-          exercitationem atque ad eveniet modi, maiores, quia labore neque, minima explicabo aliquam pariatur assumenda
-          esse?</p>
-      </div>
+      <h2 class="mt-20 mb-12 text-4xl font-bold">Questions?</h4>
+        <div class="
+            w-full max-w-2xl
+            border rounded-2xl
+            border-fg/20
+            *:p-6
+            *:not-last:border-b
+            *:not-last:border-b-fg/20
+            [&_summary]:font-bold
+            [&_summary]:list-none
+            [&_summary]:cursor-pointer
+            [&_summary]:flex
+            [&_summary]:items-center
+            [&_svg]:ml-auto
+            [&_svg]:size-4
+            [&_svg]:text-muted
+            [&_svg]:group-hover/summary:text-fg
+            [&_svg]:group-open:rotate-180
+            [&_svg]:transition
+            [&_p]:mt-4
+            [&_p]:text-sm 
+            [&_p]:text-muted
+        ">
+          <details open class="group">
+            <summary class="group/summary">
+              Is there free plan?
+              <svg>
+                <use href="svg/icons/chevron-down.svg"></use>
+              </svg>
+            </summary>
+            <p>Yes. Solo is free forever with one calendar. Upgrade whenever you need more.</p>
+          </details>
+          <details class="group">
+            <summary class="group/summary">
+              Which calendars do you support?
+              <svg>
+                <use href="svg/icons/chevron-down.svg"></use>
+              </svg>
+            </summary>
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Iste ea facilis fuga. Vero suscipit voluptates
+              exercitationem atque ad eveniet modi, maiores, quia labore neque, minima explicabo aliquam pariatur
+              assumenda esse?</p>
+          </details>
+          <details class="group">
+            <summary class="group/summary">
+              Can I cancel any time?
+              <svg>
+                <use href="svg/icons/chevron-down.svg"></use>
+              </svg>
+            </summary>
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Iste ea facilis fuga. Vero suscipit voluptates
+              exercitationem atque ad eveniet modi, maiores, quia labore neque, minima explicabo aliquam pariatur
+              assumenda esse?</p>
+          </details>
+          <details class="group">
+            <summary class="group/summary">
+              Is my data private?
+              <svg>
+                <use href="svg/icons/chevron-down.svg"></use>
+              </svg>
+            </summary>
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Iste ea facilis fuga. Vero suscipit voluptates
+              exercitationem atque ad eveniet modi, maiores, quia labore neque, minima explicabo aliquam pariatur
+              assumenda esse?</p>
+          </details>
+        </div>
+    </div>
   </section>
 
   <!-- FOOTER -->
