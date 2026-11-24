@@ -3,6 +3,8 @@
 @source "./";
 
 @theme inline {
+    --font-display: "Archivo Black", sans-serif;
+
     --color-brand-50:  oklch(from var(--color-slate-50)  l calc(min(0.3, c * var(--x-brand-coef))) var(--x-brand-base));
     --color-brand-100: oklch(from var(--color-slate-100) l calc(min(0.3, c * var(--x-brand-coef))) var(--x-brand-base));
     --color-brand-200: oklch(from var(--color-slate-200) l calc(min(0.3, c * var(--x-brand-coef))) var(--x-brand-base));

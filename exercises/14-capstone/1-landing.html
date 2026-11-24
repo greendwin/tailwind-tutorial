@@ -7,6 +7,10 @@
   <title>14.1 · Capstone</title>
   <link rel="stylesheet" href="./capstone.css" />
 
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&display=swap" rel="stylesheet">
+
   <script>
     (function () {
       const theme = localStorage.getItem("customTheme");
@@ -31,15 +35,12 @@
   flex  flex-col 
   *:px-6
   [&>:is(nav,section)]:border-b 
-  [&>footer]:not-last:border-b 
   *:border-fg/10
 
-  [&_:is(a,button,summary)]:outline-none
-  [&_:is(a,button,summary)]:focus-visible:rounded-xs
-  [&_:is(a,button,summary)]:focus-visible:ring-1
-  [&_:is(a,button,summary)]:focus-visible:ring-fg/50
-  [&_:is(a,button,summary)]:focus-visible:ring-offset-3
-  [&_:is(a,button,summary)]:focus-visible:ring-offset-surface
+  [&_:is(a,button,summary)]:focus-visible:outline-2
+  [&_:is(a,button,summary)]:focus-visible:outline-offset-3
+  [&_:is(a,button,summary)]:focus-visible:outline-fg/50
+  [&_:is(a,summary)]:focus-visible:rounded-xs
 ">
   <nav>
     <div class="
@@ -65,7 +66,7 @@
         <a href="#">FAQ</a>
       </div>
       <div class="gap-4">
-        <button id="theme" class="
+        <button id="theme" aria-label="toggle dark mode" class="
             size-8
             border rounded-lg border-fg/20
             fill-muted
@@ -120,7 +121,7 @@
           New: weekly focus reports
         </div>
         <h1 class="
-            text-5xl font-bold
+            text-5xl font-display
         ">
           Plan less.<br />
           <span class="
@@ -306,7 +307,7 @@
       <p class="mb-4 uppercase font-bold text-brand-400">
         Features
       </p>
-      <h2 class="mb-12 text-4xl font-bold text-center">
+      <h2 class="mb-12 text-4xl font-display text-center">
         Everything you need<br />to own your calendar
       </h2>
       <div class="
@@ -377,7 +378,7 @@
         w-full max-w-page mx-auto
         py-24 flex flex-col items-center
     ">
-      <h2 class="mb-8 text-4xl font-bold">
+      <h2 class="mb-8 text-4xl font-display">
         Simple pricing
       </h2>
       <div class="
@@ -565,7 +566,9 @@
         w-full max-w-page mx-auto
         flex flex-col items-center
     ">
-      <h2 class="mb-12 text-4xl font-bold">Loved by busy people</h2>
+      <h2 class="mb-12 text-4xl font-display">
+        Loved by busy people
+      </h2>
       <div class="
           grid grid-cols-3 gap-12
           *:p-6 *:rounded-xl
@@ -633,7 +636,9 @@
         </div>
       </div>
 
-      <h2 class="mt-20 mb-12 text-4xl font-bold">Questions?</h2>
+      <h2 class="mt-20 mb-12 text-4xl font-display">
+        Questions?
+      </h2>
       <div class="
             w-full max-w-2xl
             border rounded-2xl
@@ -704,7 +709,7 @@
 
   <!-- FOOTER -->
 
-  <footer class="py-12 bg-surface-alt">
+  <footer class="py-12 bg-surface-alt border-b">
     <div class="
         w-full max-w-page mx-auto
         flex items-start justify-between gap-[10dvw]
