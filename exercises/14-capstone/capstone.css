@@ -40,3 +40,4 @@
 }
 
 @custom-variant dark (&:where(.dark, .dark *));
+@custom-variant hocus (&:where(:hover, :focus-visible));
