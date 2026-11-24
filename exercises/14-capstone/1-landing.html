@@ -30,7 +30,7 @@
   bg-surface text-fg
   flex  flex-col 
   *:px-6 *:not-last:border-b 
-  *:not-last:border-white/10
+  *:not-last:border-fg/10
 ">
   <nav>
     <div class="
@@ -83,6 +83,8 @@
       </div>
     </div>
   </nav>
+
+  <!-- HERO -->
 
   <section class="
       min-h-dvh flex
@@ -247,6 +249,8 @@
     </div>
   </section>
 
+  <!-- TRUSTED BY -->
+
   <section class="
       min-h-40 bg-surface-alt flex
   ">
@@ -254,7 +258,9 @@
         w-full max-w-page mx-auto
         flex flex-col items-center justify-center
     ">
-      <p class="mb-6 text-muted text-sm font-semibold tracking-wide">Trusted by 12,000+ focused teams</p>
+      <p class="mb-6 text-muted text-sm font-semibold tracking-wide">
+        Trusted by 12,000+ focused teams
+      </p>
       <div class="
           w-full text-muted text-xl flex justify-between
           *:h-7
@@ -281,87 +287,267 @@
     </div>
   </section>
 
-  <section class="min-h-dvh">
-    <p>Features</p>
-    <h2>Everything you need to own your calendar</h2>
+  <!-- FEATURES -->
+
+  <section class="py-24 flex">
     <div class="
-        grid grid-cols-3
-        *:border *:p-4
+        w-full max-w-page m-auto
+        flex flex-col items-center
     ">
-      <div>
-        <div class="size-10 border"></div>
-        <h3>Auto time-blocking</h3>
-        <p>Drag tasks onto your day. Tempo finds the gaps and books them.</p>
-      </div>
-      <div>
-        <div class="size-10 border"></div>
-        <h3>Meeting shield</h3>
-        <p>Focus blocks show as busy, so nobody books over your deep work.</p>
-      </div>
-      <div>
-        <div class="size-10 border"></div>
-        <h3>Honest reports</h3>
-        <p>See planned vs. actual time every Friday, no guild trip included.</p>
-      </div>
-      <div>
-        <div class="size-10 border"></div>
-        <h3>Two-way sync</h3>
-        <p>Google, Outlook and iCloud calendars stay in step, instantly.</p>
-      </div>
-      <div>
-        <div class="size-10 border"></div>
-        <h3>Focus sounds</h3>
-        <p>Built-in lo-fi, rain and brown noise start with every block.</p>
-      </div>
-      <div>
-        <div class="size-10 border"></div>
-        <h3>Keyboard first</h3>
-        <p>Every action is one shortcut away. Your mouse can take a nap.</p>
+      <p class="mb-4 uppercase font-bold text-brand-400">
+        Features
+      </p>
+      <h2 class="mb-12 text-4xl font-bold">
+        Everything you need<br />to own your calendar
+      </h2>
+      <div class="
+          grid grid-cols-3 gap-6
+          *:p-6 *:rounded-lg
+          *:border *:border-fg/20
+          [&_h3]:font-semibold
+          [&_h3]:mb-2
+          [&_h3]:mt-4
+          [&_p]:text-sm
+          [&_p]:text-muted
+          [&_svg]:size-12
+          [&_svg]:p-3
+          [&_svg]:rounded-xl
+          [&_svg]:text-indigo-200
+          [&_svg]:bg-indigo-950
+      ">
+        <div>
+          <svg>
+            <use href="svg/icons/clock.svg"></use>
+          </svg>
+          <h3>Auto time-blocking</h3>
+          <p>Drag tasks onto your day. Tempo finds the gaps and books them.</p>
+        </div>
+        <div>
+          <svg>
+            <use href="svg/icons/shield.svg"></use>
+          </svg>
+          <h3>Meeting shield</h3>
+          <p>Focus blocks show as busy, so nobody books over your deep work.</p>
+        </div>
+        <div>
+          <svg>
+            <use href="svg/icons/report.svg"></use>
+          </svg>
+          <h3>Honest reports</h3>
+          <p>See planned vs. actual time every Friday, no guild trip included.</p>
+        </div>
+        <div>
+          <svg>
+            <use href="svg/icons/sync.svg"></use>
+          </svg>
+          <h3>Two-way sync</h3>
+          <p>Google, Outlook and iCloud calendars stay in step, instantly.</p>
+        </div>
+        <div>
+          <svg>
+            <use href="svg/icons/music.svg"></use>
+          </svg>
+          <h3>Focus sounds</h3>
+          <p>Built-in lo-fi, rain and brown noise start with every block.</p>
+        </div>
+        <div>
+          <svg>
+            <use href="svg/icons/command.svg"></use>
+          </svg>
+          <h3>Keyboard first</h3>
+          <p>Every action is one shortcut away. Your mouse can take a nap.</p>
+        </div>
       </div>
     </div>
   </section>
 
-  <section class="min-h-dvh">
-    <h2>Simple pricing</h2>
-    <div>
-      <span>Monthly</span>
-      <span>Yearly -20%</span>
-    </div>
-    <div>
-      <h4>Solo</h4>
-      <div><span>$0</span> <span>/mo</span></div>
-      <p>For trying things out.</p>
-      <ul>
-        <li>1 calendar</li>
-        <li>Time-blocking</li>
-        <li>Reports</li>
-      </ul>
-      <button>Get started</button>
-    </div>
-    <div>
-      <div>Most popular</div>
-      <h4>Pro</h4>
-      <div><span>$8</span> <span>/mo</span></div>
-      <p>For people who live in their calendar.</p>
-      <ul>
-        <li>Unlimited calendars</li>
-        <li>Meeting shield</li>
-        <li>Weekly reports</li>
-      </ul>
-      <button>Start 14-day trial</button>
-    </div>
-    <div>
-      <h4>Team</h4>
-      <div><span>$14</span> <span>/user/mo</span></div>
-      <p>Shared focus hours for teams.</p>
-      <ul>
-        <li>Everything in Pro</li>
-        <li>Team no-meeting day</li>
-        <li>Admin & SSO</li>
-      </ul>
-      <button>Contact sales</button>
+  <!-- PRICING -->
+
+  <section class="bg-surface-alt">
+    <div class="
+        w-full max-w-page mx-auto
+        py-24 flex flex-col items-center
+    ">
+      <h2 class="mb-8 text-4xl font-bold">
+        Simple pricing
+      </h2>
+      <div class="
+          mb-12 pl-6 py-1 pr-1
+          rounded-full bg-surface border border-fg/20
+          flex items-center gap-4
+      ">
+        <span class="text-muted font-semibold">
+          Monthly
+        </span>
+        <span class="
+            px-5 py-2
+            rounded-full bg-brand-600
+            font-bold
+        ">
+          Yearly
+          <span class="text-fg/70">-20%</span>
+        </span>
+      </div>
+      <div class="
+          w-full
+          flex items-center gap-8
+          *:flex-1
+
+          [&_button]:px-6
+          [&_button]:py-3
+          [&_button]:border
+          [&_button]:border-fg/20 
+          [&_button]:rounded-lg
+          [&_button]:font-bold
+          [&_button]:cursor-pointer
+          [&_button]:transition
+          [&_button]:hover:bg-fg/3
+          [&_button]:active:scale-98
+
+          [&_button.primary]:border-surface/50
+          [&_button.primary]:bg-fg
+          [&_button.primary]:hover:bg-brand-200/95
+          [&_button.primary]:text-brand-600
+      ">
+        <div class="
+            p-8 border rounded-xl
+            bg-surface border-fg/20
+            flex flex-col gap-6
+        ">
+          <h4 class="font-bold">Solo</h4>
+          <div class="space-y-2">
+            <p>
+              <span class="text-4xl font-bold">$0</span>
+              <span class="text-muted">/mo</span>
+            </p>
+            <p class="text-muted">For trying things out.</p>
+          </div>
+          <ul class="
+              space-y-2
+              [&_svg]:inline-block
+              [&_svg]:size-5
+          ">
+            <li>
+              <svg>
+                <use href="svg/icons/check.svg"></use>
+              </svg>
+              <span>1 calendar</span>
+            </li>
+            <li>
+              <svg>
+                <use href="svg/icons/check.svg"></use>
+              </svg>
+              <span>Time-blocking</span>
+            </li>
+            <li class="text-muted">
+              <svg>
+                <use href="svg/icons/x-mark.svg"></use>
+              </svg>
+              <span>Reports</span>
+            </li>
+          </ul>
+          <button>
+            Get started
+          </button>
+        </div>
+        <div class="
+            relative
+            px-8 py-16 border-4 rounded-3xl
+            bg-brand-600 border-surface/20
+            text-white
+            flex flex-col gap-6
+        ">
+          <div class="
+              absolute top-0 left-[50%]
+              translate-[-50%]
+              px-3 py-1 rounded-full
+              bg-pink-600
+              text-sm font-semibold
+          ">
+            Most popular
+          </div>
+          <h4 class="font-bold">Pro</h4>
+          <div class="space-y-2">
+            <p>
+              <span class="text-4xl font-bold">$8</span>
+              <span class="text-white/70">/mo</span>
+            </p>
+            <p class="text-white/70">For people who live in their calendar.</p>
+          </div>
+          <ul class="
+              space-y-2
+              [&_svg]:inline-block
+              [&_svg]:size-5
+          ">
+            <li>
+              <svg>
+                <use href="svg/icons/check.svg"></use>
+              </svg>
+              <span>Unlimited calendars</span>
+            </li>
+            <li>
+              <svg>
+                <use href="svg/icons/check.svg"></use>
+              </svg>
+              <span>Meeting shield</span>
+            </li>
+            <li>
+              <svg>
+                <use href="svg/icons/check.svg"></use>
+              </svg>
+              <span>Weekly reports</span>
+            </li>
+          </ul>
+          <button class="primary">
+            Start 14-day trial
+          </button>
+        </div>
+        <div class="
+            p-8 border rounded-xl
+            bg-surface border-fg/20
+            flex flex-col gap-6
+        ">
+          <h4 class="font-bold">Team</h4>
+          <div class="space-y-2">
+            <p>
+              <span class="text-4xl font-bold">$14</span>
+              <span class="text-muted">/user/mo</span>
+            </p>
+            <p class="text-muted">Shared focus hours for teams.</p>
+          </div>
+          <ul class="
+              space-y-2
+              [&_svg]:inline-block
+              [&_svg]:size-5
+          ">
+            <li>
+              <svg>
+                <use href="svg/icons/check.svg"></use>
+              </svg>
+              <span>Everything in Pro</span>
+            </li>
+            <li>
+              <svg>
+                <use href="svg/icons/check.svg"></use>
+              </svg>
+              <span>Team no-meeting day</span>
+            </li>
+            <li>
+              <svg>
+                <use href="svg/icons/check.svg"></use>
+              </svg>
+              <span>Admin & SSO</span>
+            </li>
+          </ul>
+          <button>
+            Contact sales
+          </button>
+        </div>
+      </div>
     </div>
   </section>
+
+  <!-- USERS REVIEW -->
 
   <section class="min-h-dvh">
     <h2>Loved by busy people</h2>
@@ -409,32 +595,56 @@
       </div>
   </section>
 
-  <footer>
-    <div>
-      <h4>Tempo</h4>
-      <p>Focused time, protected. Made by a small team who hate pointless meetings.</p>
-    </div>
-    <div>
-      <h5>Product</h5>
-      <p>Features</p>
-      <p>Pricing</p>
-      <p>Changelog</p>
-    </div>
-    <div>
-      <h5>Company</h5>
-      <p>About</p>
-      <p>Careers</p>
-      <p>Blog</p>
-    </div>
-    <div>
-      <h5>Legal</h5>
-      <p>Privacy</p>
-      <p>Terms</p>
-      <p>Cookies</p>
+  <!-- FOOTER -->
+
+  <footer class="py-12 bg-surface-alt">
+    <div class="
+        w-full max-w-page mx-auto
+        flex items-start justify-between gap-[10dvw]
+        *:first:flex-2
+        *:not-first:flex-1
+        text-sm
+        [&_a]:text-muted
+        [&_a]:hover:text-shadow-sm
+        [&_a]:text-shadow-fg/20
+        [&_a]:transition
+    ">
+      <div class="space-y-4">
+        <h4 class="flex items-center gap-2 text-lg">
+          <svg class="size-7 bg-brand-600 rounded-lg">
+            <use href="svg/logo.svg" />
+          </svg>
+          <span class="font-bold text-shadow-2xs text-shadow-fg">Tempo</span>
+        </h4>
+        <p class="text-muted">Focused time, protected. Made by a small team who hate pointless meetings.</p>
+      </div>
+      <div class="flex flex-col items-start gap-1">
+        <h5 class="mb-3 font-bold">Product</h5>
+        <a href="#">Features</a>
+        <a href="#">Pricing</a>
+        <a href="#">Changelog</a>
+      </div>
+      <div class="flex flex-col items-start gap-1">
+        <h5 class="mb-3 font-bold">Company</h5>
+        <a href="#">About</a>
+        <a href="#">Careers</a>
+        <a href="#">Blog</a>
+      </div>
+      <div class="flex flex-col items-start gap-1">
+        <h5 class="mb-3 font-bold">Legal</h5>
+        <a href="#">Privacy</a>
+        <a href="#">Terms</a>
+        <a href="#">Cookies</a>
+      </div>
     </div>
   </footer>
-  <footer>
-    <p>(c) 2026 Tempo Labs. All rights reserved.</p>
+
+  <footer class="
+      py-6 bg-surface-alt 
+      flex justify-center
+      text-muted text-sm font-semibold
+  ">
+    <p>© 2026 Tempo Labs. All rights reserved.</p>
   </footer>
 
   <script>
