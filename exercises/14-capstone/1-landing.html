@@ -71,7 +71,7 @@
             fill-muted
             flex items-center justify-center
             hocus:fill-brand-400 hocus:bg-fg/5 active:bg-fg/10
-            transition cursor-pointer
+            motion-safe:transition cursor-pointer
         ">
           <svg class="hidden dark:block size-4.5">
             <use href="svg/icons/moon.svg"></use>
@@ -85,7 +85,7 @@
             border border-brand-800 rounded-lg
             bg-brand-600 text-sm font-semibold
             hocus:bg-brand-600/80
-            active:scale-98 transition cursor-pointer
+            motion-safe:active:scale-98 motion-safe:transition cursor-pointer
         ">
           Start free
         </button>
@@ -143,7 +143,7 @@
             *:px-4 *:py-2
             *:border *:rounded-lg
             *:font-semibold
-            *:active:scale-98 *:transition *:cursor-pointer
+            *:motion-safe:active:scale-98 *:motion-safe:transition *:cursor-pointer
         ">
           <button class="
               border-brand-800 bg-brand-600 
@@ -408,8 +408,8 @@
           [&_button]:rounded-lg
           [&_button]:font-bold
           [&_button]:cursor-pointer
-          [&_button]:transition
-          [&_button]:active:scale-98
+          [&_button]:motion-safe:transition
+          [&_button]:motion-safe:active:scale-98
 
           [&_button:not(.primary)]:border-fg/20 
           [&_button:not(.primary)]:hocus:bg-fg/3
@@ -651,7 +651,7 @@
             [&_svg]:text-muted
             [&_svg]:group-hocus/summary:text-fg
             [&_svg]:group-open:rotate-180
-            [&_svg]:transition
+            [&_svg]:motion-safe:transition
             [&_p]:mt-4
             [&_p]:text-sm 
             [&_p]:text-muted
@@ -714,7 +714,7 @@
         [&_a]:text-muted
         [&_a]:hocus:text-shadow-sm
         [&_a]:text-shadow-fg/20
-        [&_a]:transition
+        [&_a]:motion-safe:transition
     ">
       <div class="space-y-4">
         <h4 class="flex items-center gap-2 text-lg">
